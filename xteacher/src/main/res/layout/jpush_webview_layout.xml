@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.jpush.android.ui.FullScreenView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/actionbarLayoutId"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rlRichpushTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:background="@color/jpush_webview_layout_rl">
+
+        <ImageButton
+            android:id="@+id/imgRichpushBtnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_9"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@drawable/richpush_btn_selector" />
+
+        <ImageView
+            android:id="@+id/imgView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/imgRichpushBtnBack"
+            android:clickable="false"
+            android:src="@drawable/ic_richpush_actionbar_divider" />
+
+        <TextView
+            android:id="@+id/tvRichpushTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/space_7"
+            android:layout_toRightOf="@id/imgView"
+            android:clickable="false"
+            android:text=" "
+            android:textSize="@dimen/sp20"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fullWebView"
+        android:background="@color/black" />
+
+</cn.jpush.android.ui.FullScreenView>

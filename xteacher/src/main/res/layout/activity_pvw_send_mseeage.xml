@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <include layout="@layout/title_bar"/>
+    <TextView
+        android:id="@+id/activity_pvw_send_text"
+        android:layout_margin="@dimen/dp_15"
+        android:padding="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textColor="@color/text_color28"
+        android:textSize="@dimen/sp14"
+        android:gravity="left"
+        android:background="@drawable/shape_white_round_bg"/>
+</LinearLayout>

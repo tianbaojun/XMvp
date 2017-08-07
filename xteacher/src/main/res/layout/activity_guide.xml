@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/guide_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- <TextView
+         android:id="@+id/guide_btn"
+         android:layout_width="@dimen/dp_125"
+         android:layout_height="wrap_content"
+         android:layout_marginBottom="@dimen/dp_60"
+         android:layout_alignParentBottom="true"
+         android:text="@string/immediate_experience"
+         android:paddingTop="@dimen/dp_10"
+         android:paddingBottom= "@dimen/dp_10"
+         android:paddingRight="@dimen/dp_30"
+         android:paddingLeft="@dimen/dp_30"
+         android:layout_centerHorizontal="true"
+         android:gravity="center"
+         android:clickable="true"
+         android:textColor="@color/white"
+         android:visibility="visible"
+         />
+ -->
+    <LinearLayout
+        android:id="@+id/cbs_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp_100"
+        android:visibility="visible">
+        <CheckBox
+            android:id="@+id/cbs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/checkbox_selector"
+            android:paddingLeft="@dimen/GuideCheckBox" />
+
+        <TextView
+            android:id="@+id/cbs_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/Agree_with_the_Hezhuo_campus_user_privacy_agreement"
+            android:textColor="#da837f"
+            android:textSize="@dimen/sp12"/>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/guide_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp_50"
+        android:src="@mipmap/guide_btn"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/guide_dots"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="visible" />
+
+</RelativeLayout>

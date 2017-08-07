@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <include layout="@layout/title_bar"/>
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:padding="@dimen/dp_15"
+                android:background="@color/text_colore5"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/to_receive_ll_teacher"
+                    android:padding="@dimen/dp_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:textColor="@color/text_color87"
+                    android:textSize="@dimen/sp_14"
+                    android:background="@drawable/shape_white_round_bg"
+                    android:drawableRight="@mipmap/arrow_right"
+                    android:text="@string/selected_school_teachers" />
+
+                <TextView
+                    android:id="@+id/to_receive_ll_home"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:padding="@dimen/dp_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/text_color87"
+                    android:background="@drawable/shape_white_round_bg"
+                    android:drawableRight="@mipmap/arrow_right"
+                    android:text="@string/the_parents_of_the_students" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/meeting_title_ll"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:background="@drawable/shape_white_round_bg"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/conference_title"
+                    android:padding="@dimen/dp_10"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/text_color28"
+                    />
+                <EditText
+                    android:id="@+id/meeting_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="left"
+                    android:padding="@dimen/dp_10"
+                    android:textSize="14sp"
+                    android:background="@null"
+                    android:textColor="@color/text_color28"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/meeting_time"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_15"
+                android:textSize="@dimen/sp_14"
+                android:padding="@dimen/dp_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:text="@string/meeting_time"
+                android:textColor="@color/text_color28"
+                android:background="@drawable/shape_white_round_bg" />
+            <LinearLayout
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_white_round_bg"
+                android:padding="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_15">
+                <TextView
+                    android:text="@string/receiving_object"
+                    android:maxLines="2"
+                    android:textSize="@dimen/sp_14"
+                    android:ellipsize="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="left" />
+                <LinearLayout
+                    android:id="@+id/to_receive_ll"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/to_receive_ll_object"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_14"
+                        android:orientation="horizontal"
+                        android:gravity="left" />
+                    <TextView
+                        android:id="@+id/to_receive_ll_object1"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/sp_14"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="left" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/title_ll"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_12"
+                android:padding="@dimen/dp_10"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_white_round_bg">
+                <TextView
+                    android:id="@+id/tv_co"
+                    style="@style/text_14sp_color28"
+                    android:text="@string/conference_theme"
+                    android:textSize="@dimen/sp_14"
+                    />
+                <EditText
+                    android:id="@+id/add_meeting_ed"
+                    style="@style/edt_minHight_16sp_color28"
+                    android:textSize="@dimen/sp_14"
+                    />  <!--android:hint="@string/please_enter_a_conference_theme"-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cb_rl"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+               <!-- <CheckBox
+                    android:id="@+id/cb1"
+                    android:layout_marginTop="@dimen/dp_10"
+                    style="@style/meetingCheckBox"
+                    android:text="@string/informations_in_BBS"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/text_color28"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />-->
+
+                <CheckBox
+                    android:id="@+id/cb2"
+                    android:layout_marginTop="@dimen/dp_10"
+                    style="@style/meetingCheckBox"
+                    android:layout_weight="1"
+                    android:text="@string/Jpush"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="@dimen/sp_14"
+                    android:visibility="gone"
+                    android:textColor="@color/text_color28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"/>
+
+                <CheckBox
+                    android:id="@+id/cb3"
+                    android:layout_weight="1"
+                    android:layout_marginTop="@dimen/dp_10"
+                    style="@style/meetingCheckBox"
+                    android:text="@string/short_message"
+                    android:textSize="@dimen/sp_14"
+                    android:visibility="gone"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/text_color28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <CheckBox
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_15"
+                style="@style/meetingCheckBox"
+                android:visibility="gone"
+                android:checked="true"
+                android:enabled="false"
+                android:text="@string/whether_you_need_a_receipt"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/text_color28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+    <!--<LinearLayout
+        android:layout_marginTop="@dimen/dp_12"
+        android:padding="@dimen/dp_10"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_white_round_bg">
+        <TextView
+            style="@style/text_16sp_color28"
+            android:text="@string/conference_content"
+            />
+        <EditText
+            style="@style/edt_minHight_16sp_color65"
+            android:hint="@string/please_enter_the_conference_content"
+            />
+    </LinearLayout>-->
+</LinearLayout>

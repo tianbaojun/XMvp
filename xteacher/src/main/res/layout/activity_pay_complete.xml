@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_pay_complete"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context="com.zjhz.teacher.ui.activity.PayCompleteActivity">
+
+    <include layout="@layout/title_bar"/>
+
+    <TextView
+        android:id="@+id/pay_money"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="-18.8"
+        android:textSize="@dimen/sp20"
+        android:textColor="@color/gray3"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_25"
+        android:paddingRight="@dimen/dp_25">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="相关说明："
+            android:textColor="@color/gray4"
+            android:textSize="@dimen/sp_16"/>
+        <TextView
+            android:id="@+id/pay_des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="14iahuihasoif12312412312312312312312312312312a"
+            android:gravity="right"
+            android:textColor="@color/gray6"
+            android:textSize="@dimen/sp_16"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_25"
+        android:paddingRight="@dimen/dp_25"
+        android:layout_marginTop="@dimen/dp_1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="支付时间："
+            android:textColor="@color/gray4"
+            android:textSize="@dimen/sp_16"/>
+        <TextView
+            android:id="@+id/pay_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2017-01-01 00:00:00"
+            android:gravity="right"
+            android:textColor="@color/gray6"
+            android:textSize="@dimen/sp_16"/>
+    </LinearLayout>
+
+
+</LinearLayout>

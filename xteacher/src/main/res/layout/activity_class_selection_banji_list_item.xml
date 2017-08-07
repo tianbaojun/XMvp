@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="pro.ui.activity.xkgl.activity.ClassSelectionActivity">
+   <!-- <TextView
+        android:id="@+id/num_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_32"
+        android:background="@color/gray_d"
+        android:text="选课人数"
+        android:paddingLeft="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:textColor="@color/selection_num"
+        android:textSize="@dimen/sp12"/>-->
+
+    <com.zjhz.teacher.ui.view.ScrollViewWithListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:id="@+id/listview"/>
+
+    <!--<TextView
+        android:id="@+id/unchoose_num_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_32"
+        android:background="@color/gray_d"
+        android:text="选课人数"
+        android:paddingLeft="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:textColor="@color/selection_num"
+        android:textSize="@dimen/sp12"/>
+
+    <ListView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:id="@+id/unchoose_listview"/>-->
+</LinearLayout>

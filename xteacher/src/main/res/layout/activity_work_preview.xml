@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadingEdge="none"
+    android:orientation="vertical"
+    android:id="@+id/ll"
+    tools:context=".ui.activity.HomeWorkPreviewActivity">
+    <include
+        android:id="@+id/preview_work_title"
+        layout="@layout/title_bar" />
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_below="@+id/preview_work_title"
+        android:layout_above="@+id/hint_rl_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:descendantFocusability="blocksDescendants"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_15"
+            android:background="@color/white"
+            android:padding="0dip"
+            android:orientation="vertical">
+            <com.zjhz.teacher.ui.view.CircleImageView
+                android:id="@+id/activity_work_preview_image"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_25"
+                android:contentDescription="@null"
+                app:border_color="@color/transparent"
+                android:src="@mipmap/header"
+                app:border_width="@dimen/dp_0" />
+
+            <TextView
+                android:id="@+id/activity_work_preview_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_12"
+                android:text="@string/teacher"
+                android:textSize="@dimen/sp14" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_11"
+                android:padding="@dimen/dp_10"
+                android:background="@drawable/dashline">
+                <LinearLayout
+                    android:id="@+id/activity_work_preview_ll"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/job_name"
+                        android:textColor="@color/text_color28"
+                        android:textSize="@dimen/sp14" />
+                    <TextView
+                        android:id="@+id/activity_work_preview_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_color28"
+                        android:textSize="@dimen/sp14" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/activity_work_preview_subject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/activity_work_preview_ll"
+                    android:text="科　　目："
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:textColor="@color/text_color28"
+                    android:textSize="@dimen/sp14" />
+
+                <TextView
+                    android:id="@+id/activity_work_preview_issue_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/activity_work_preview_subject"
+                    android:text="@string/release_time"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:textColor="@color/text_color28"
+                    android:textSize="@dimen/sp14" />
+
+                <TextView
+                    android:id="@+id/activity_work_preview_work_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/activity_work_preview_issue_time"
+                    android:text="@string/job_length"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:textColor="@color/text_color28"
+                    android:textSize="@dimen/sp14" />
+
+                <TextView
+                    android:id="@+id/activity_work_preview_hand_in_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/activity_work_preview_work_time"
+                    android:text="@string/time_of_delivery"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:textColor="@color/text_color28"
+                    android:textSize="@dimen/sp14" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_below="@+id/activity_work_preview_hand_in_time">
+
+                    <TextView
+                        android:id="@+id/activity_work_preview_class"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="班　　级："
+                        android:textColor="@color/text_color28"
+                        android:textSize="@dimen/sp14" />
+
+                    <com.zjhz.teacher.ui.view.ScrollViewWithGridView
+                        android:id="@+id/activity_work_preview_grid"
+                        android:layout_width="wrap_content"
+                        android:listSelector="@color/lightest_gray"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_11"
+                        android:horizontalSpacing="@dimen/dp_2"
+                        android:verticalSpacing="@dimen/dp_10"
+                        android:layout_toRightOf="@+id/activity_work_preview_class"
+                        android:numColumns="3" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:layout_marginRight="@dimen/dp_11"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:padding="@dimen/dp_10" android:visibility="gone"
+                android:background="@drawable/dashline">
+              <TextView
+                    android:id="@+id/et_previewvf"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/teacher_voice"
+                    android:textColor="@color/text_color28"
+                    android:textSize="@dimen/sp14" />
+                <TextView
+                    android:id="@+id/bainji_iv_previewa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:visibility="visible"
+                    android:layout_marginLeft="@dimen/dp_65"
+                    android:drawablePadding="@dimen/dp_15"
+                    android:drawableLeft="@mipmap/voice_more"
+                    android:text="@string/homework_press_voilce18s"/>
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/activity_work_preview_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dashline"
+                android:layout_marginLeft="@dimen/dp_11"
+                android:layout_marginRight="@dimen/dp_11"
+                android:padding="@dimen/dp_11"
+                android:text="@string/job_content"
+                android:textColor="@color/text_color28"
+                android:textSize="@dimen/sp14" />
+
+            <com.zjhz.teacher.ui.view.ScrollViewWithGridView
+                android:id="@+id/activity_work_preview_grid_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_11"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="3" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_15"
+                android:background="@color/text_colore5"
+                />
+            <!--评论-->
+            <include layout="@layout/comment_title"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/text_colore5"
+                />
+            <RelativeLayout
+                android:id="@+id/hint_nocomment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/nocomment"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_gravity="center"
+                android:visibility="gone">
+            </RelativeLayout>
+            <!--<include layout="@layout/view"/>-->
+            <com.zjhz.teacher.ui.view.ScrollViewWithListView
+                android:id="@+id/activity_work_preview_list_image_discuss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:listSelector="@color/lightest_gray"
+                android:layout_marginTop="@dimen/dp_11"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/activity_work_preview_list_image_discuss_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:visibility="gone"
+                    android:text="@string/see_more_comments"
+                    android:textColor="@color/text_colord2"
+                    android:drawableRight="@mipmap/arrow_right"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!--评论-->
+    <RelativeLayout
+        android:id="@+id/hint_rl_preview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_alignParentBottom="true"
+        android:background="@color/text_colore5"
+        android:visibility="visible">
+        <ImageView
+            android:id="@+id/bainji_iv_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/bianji"
+            android:padding="@dimen/dp_8"
+            android:visibility="visible" />
+        <ImageView
+            android:id="@+id/dianzan_iv_preview"
+            android:layout_toLeftOf="@id/bainji_iv_preview"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dp_8"
+            android:src="@mipmap/dianzan2_nor"
+            android:visibility="visible" />
+        <TextView
+            android:layout_margin="@dimen/dp_8"
+            android:id="@+id/et_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/dianzan_iv_preview"
+            android:background="@drawable/shape_white_round_bg"
+            android:focusable="false"
+            android:gravity="center"
+            android:hint="@string/add_comments_no_more_than_200_words"
+            android:padding="@dimen/dp_5" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/edit_rl_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <LinearLayout
+            android:id="@+id/edit_preview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/text_colore5"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_28">
+
+                <TextView
+                    android:id="@+id/cancel_tv_preview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="bottom"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:text="@string/cancels"
+                    android:textSize="@dimen/sp_16"/>
+
+                <TextView
+                    android:id="@+id/sure_tv_preview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="bottom"
+                    android:paddingRight="@dimen/dp_15"
+                    android:textSize="@dimen/sp_16"
+                    android:text="@string/pickerview_submit" />
+            </RelativeLayout>
+            <EditText
+                android:id="@+id/et1_preview"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_100"
+                android:layout_margin="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@drawable/shape_white_round_bg"
+                android:gravity="top"
+                android:hint="@string/add_comments_no_more_than_200_words"
+                android:maxLength="200"
+                android:padding="@dimen/dp_5"
+                android:textColor="@color/text_color28"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+        <!--<View
+            android:id="@+id/v_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/edit"
+            android:background="@color/activity_newsdetail_view" />-->
+    </RelativeLayout>
+</RelativeLayout>

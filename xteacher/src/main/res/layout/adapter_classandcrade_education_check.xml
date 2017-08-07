@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/item_selector_backgroud"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/adapter_classandcrade_education_check_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/adapter_classandcrade_education_check_clazz"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/one_grade"
+            android:gravity="center"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/text_color28"
+            android:singleLine="true"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/adapter_classandcrade_education_check_project"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/special_inspection"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/text_color28" />
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/adapter_classandcrade_education_check_rl"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/space_24"
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:background="@drawable/yuanjiao">
+                <ImageView
+                    android:id="@+id/adapter_classandcrade_education_check_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textSize="@dimen/sp_14"
+                    android:layout_gravity="right"
+                    android:textColor="@color/text_color28"
+                    android:src="@mipmap/edu_check_ok"
+                    android:text="" />
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/add_score_ll"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:visibility="visible"
+                >
+                <TextView
+                    android:id="@+id/minScore_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_colord2"
+                    />
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/adapter_classandcrade_education_check_editText"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/space_24"
+                        android:gravity="center"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:background="@drawable/yuanjiao">
+                    </EditText>
+                    <TextView
+                        android:id="@+id/adapter_classandcrade_education_check_text"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/space_24"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:background="@drawable/yuanjiao">
+                    </TextView>
+                </FrameLayout>
+                <TextView
+                    android:id="@+id/maxScore_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_colord2"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <View
+        android:layout_below="@+id/adapter_classandcrade_education_check_ll"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/text_colore5" />
+</RelativeLayout>
+
+    <!--
+
+                         <requestFocus>
+       </requestFocus>-->

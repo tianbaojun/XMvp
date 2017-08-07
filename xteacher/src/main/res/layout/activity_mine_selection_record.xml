@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_90"
+        android:background="@color/title_background_red"
+        android:padding="@dimen/dp_8">
+        <ImageView
+            android:id="@+id/subject_img"
+            android:layout_width="@dimen/dp_28"
+            android:layout_height="@dimen/dp_28"
+            android:src="@mipmap/subject_icon"/>
+        <TextView
+            android:id="@+id/subject_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="绘画书法"
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@id/subject_img"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_alignTop="@id/subject_img"
+            android:layout_alignBottom="@id/subject_img"
+            android:gravity="center"/>
+
+
+        <TextView
+            android:id="@+id/subject_no_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A123456"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/white"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@id/subject_name_tv"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/subject_place_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="阶梯教室"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/white"
+            android:layout_alignLeft="@id/subject_name_tv"
+            android:layout_below="@id/subject_img"
+            android:layout_marginTop="@dimen/dp_20"
+            android:gravity="center"/>
+
+        <!--<TextView-->
+            <!--android:id="@+id/type_tv"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="@dimen/dp_4"-->
+            <!--android:text="历史记录"-->
+            <!--android:textSize="@dimen/sp_13"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:layout_below="@id/subject_img"-->
+            <!--android:layout_marginTop="@dimen/dp_20"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:background="@drawable/radio_green_four"-->
+            <!--android:gravity="center"/>-->
+
+
+    </RelativeLayout>
+
+   <pro.widget.Selector.AutoLocateHorizontalView
+       android:id="@+id/week_tab"
+       android:layout_width="match_parent"
+       android:layout_height="@dimen/dp_40" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_35.5"
+        android:background="@color/gray_d"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="姓名"
+            android:textColor="@color/list_title_text_color"
+            android:textSize="@dimen/sp13" />
+
+        <TextView
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="课程"
+            android:textColor="@color/list_title_text_color"
+            android:textSize="@dimen/sp13" />
+
+        <TextView
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="出勤"
+            android:textColor="@color/list_title_text_color"
+            android:textSize="@dimen/sp13" />
+
+        <TextView
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="成绩"
+            android:textColor="@color/list_title_text_color"
+            android:textSize="@dimen/sp13" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/history_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="@dimen/dp_1"
+        android:divider="#00000000"
+        android:background="@color/white"/>
+
+</LinearLayout>

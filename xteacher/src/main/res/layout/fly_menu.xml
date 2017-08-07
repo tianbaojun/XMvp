@@ -1,0 +1,47 @@
+<com.zjhz.teacher.ui.view.SectorMenu
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:jackie="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/dp_10"
+    android:id="@+id/fly_menu"
+    jackie:position="right_bottom"
+    jackie:radius="@dimen/dp_100">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/extramural_zero"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/extramural_one"
+        android:tag="@string/current_location" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/extramural_two"
+        android:tag="@string/go_to_school_route" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/extramural_three"
+        android:tag="@string/leave_school_route" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/extramural_four"
+        android:tag="@string/historical_route" />
+
+</com.zjhz.teacher.ui.view.SectorMenu>

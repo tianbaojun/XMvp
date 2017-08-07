@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/visitor_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40">
+
+        <CheckBox
+            android:id="@+id/visitor_list_item_check"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:button="@drawable/checkbox_src"
+            android:gravity="center"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.4">
+
+            <TextView
+                android:id="@+id/visit_date"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dp_1"
+                android:layout_weight="0.8"
+                android:gravity="center_vertical|right"
+                android:text="17-01-01"
+                android:textColor="@color/title_background_red"
+                android:textSize="@dimen/sp14" />
+
+            <TextView
+                android:id="@+id/visit_time"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dp_1"
+                android:layout_weight="0.6"
+                android:gravity="center_vertical|left"
+                android:paddingLeft="@dimen/dp_3"
+                android:text="00:00"
+                android:textSize="@dimen/sp14" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/visit_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/dp_1"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="李刚"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/visit_state"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="拜访完成"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/visit_teacher"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="老师"
+            android:textSize="@dimen/sp14"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_c" />
+</LinearLayout>

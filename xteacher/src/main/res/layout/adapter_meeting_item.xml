@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_selector_backgroud"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/dp_10"
+    android:paddingRight="@dimen/dp_10">
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/item_left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_10">
+
+            <ImageView
+                android:id="@+id/checked_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_15"
+                android:paddingRight="@dimen/dp_15"
+                android:src="@mipmap/selectfalse_icon"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/data_ll"
+                android:layout_toRightOf="@id/checked_iv">
+
+                <TextView
+                    android:id="@+id/title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/dp_2"
+                    android:textColor="@color/text_color28"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/content_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:lineSpacingExtra="@dimen/dp_2"
+                    android:textColor="@color/text_color65"
+                    android:textSize="@dimen/sp_12" />
+
+                <!--<TextView
+                    android:id="@+id/show_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_colore4288c4"
+                    android:text="@string/show_all"
+                    android:textSize="@dimen/sp12"/>-->
+
+                <include layout="@layout/bottom_item" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/item_right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:background="@color/text_coloree452f"
+            android:paddingBottom="@dimen/dp_20">
+
+            <TextView
+                android:id="@+id/item_right_txt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/delete"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+</LinearLayout>

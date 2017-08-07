@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00BEAF</color>
+    <color name="colorPrimaryDark">#00988c</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="background">#f8f8f8</color>
+    <color name="title_background_red">#c4d600</color>
+
+    <color name="red_f16a59">#f16a59</color>
+    <color name="actionbar_background_start">#8B1A1A</color>
+    <!-- Tab选中字体颜色 -->
+    <color name="main_bottom_text_color">#c4e600</color>
+    <!-- Tab未选中字体颜色 -->
+    <color name="main_bottom_text_gray">#909090</color>
+    <color name="text_color_8CA404">#8CA404</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="lightest_gray">#0a000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray">#808080</color>
+    <color name="login_text">#ffdd928b</color>
+    <color name="home_grid_item_txt">#494949</color>
+    <color name="black">#000000</color>
+    <color name="white5">#ff555555</color>
+    <color name="light_gray">#1a000000</color>
+
+    <color name="red">#FF0000</color>
+    <color name="gold">#FFD700</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="green">#008000</color>
+    <color name="purple">#800080</color>
+    <color name="pink">#FFC0CB</color>
+    <!--<color name="orange">#FFA500</color>-->
+    <color name="main_gray">#9A9A9A</color>
+
+    <color name="gray3">#333333</color>
+    <color name="gray4">#444444</color>
+    <color name="gray5">#555555</color>
+    <color name="gray6">#666666</color>
+    <color name="gray9">#999999</color>
+    <color name="gray_c">#cccccc</color>
+    <color name="gray_d">#dddddd</color>
+    <color name="gray_df">#dfdfdf</color>
+    <color name="gray_f0">#f0f0f0</color>
+    <color name="gray_f8">#f8f8f8</color>
+    <color name="pickerview_timebtn_nor">#057dff</color>
+    <color name="pickerview_timebtn_pre">#c2daf5</color>
+    <color name="pickerview_bg_topbar">#f5f5f5</color>
+    <color name="pickerview_topbar_title">#000000</color>
+    <color name="pickerview_wheelview_textcolor_out">#a8a8a8</color>
+    <color name="pickerview_wheelview_textcolor_center">#2a2a2a</color>
+    <color name="pickerview_wheelview_textcolor_divider">#d5d5d5</color>
+    <!--覆盖颜色-->
+    <color name="bgColor_overlay">#60000000</color>
+    <color name="text_color28">#282828</color>
+    <color name="text_color65">#656565</color>
+    <color name="text_colord2">#d2d2d2</color>
+    <color name="text_colore5">#e5e5e5</color>
+    <color name="text_colore4288c4">#4288c4</color>
+    <color name="text_coloree452f">#ee452f</color>
+    <color name="green_color36B421">#36B421</color>
+    <color name="colorb7b7b7">#b7b7b7</color>
+    <color name="text_color54b7f0">#54b7f0</color>
+    <color name="color_bule">#2F9BFF</color>
+    <color name="color_bule2">#40B3F0</color>
+    <color name="color_bule3">#99ddff</color>
+    <color name="color_f2">#f2f2f2</color>
+    <color name="color_dd928b">#dd928b</color>
+    <color name="color_ee452f">#c4d600</color>
+    <color name="color_4288c4">#4288c4</color>
+    <color name="color_fec2ba">#fec2ba</color>
+
+    <color name="user_two">#434343</color>
+    <color name="home_two">#909090</color>
+
+    <!--作业管理-->
+    <color name="work_one">#282828</color>
+
+    <!--我的课表-->
+    <color name="schedule_griditems_bg">#ffe8ecef</color>
+    <color name="schedule_commo_text_color">#ff333333</color>
+    <color name="schedule_line">#ffd3dde6</color>
+    <color name="about_company">#ff69d0e3</color>
+    <color name="login_choose_school">#ffb83928</color>
+    <color name="login_edittext_text">#ffa6a6a6</color>
+    <color name="activity_my_schedule_query_pull_refresh_view">#fcfcfc</color>
+    <color name="activity_mycenter_user_head">#ff00ff</color>
+    <color name="activity_newsdetail_view">#5f000000</color>
+    <color name="activity_personal_calendar_month_day_back">#ececec</color>
+    <color name="activity_personal_calendar_rl_back">#f2f2f2</color>
+    <color name="activity_personal_calendar_rl_view">#c0c0c0</color>
+    <color name="activity_personal_calendar_detail_view">#9f9f9f</color>
+    <color name="activity_pick_at_user">#D4D4D4</color>
+    <color name="activity_select_pic_popup_window_text">#464646</color>
+    <color name="custom_toast_text">#3a8e00</color>
+    <color name="text_color9c">#9c9c9c</color>
+    <color name="text_color32">#323232</color>
+    <color name="dialog_phone_call">#02ac01</color>
+    <color name="dialog_phone_cancel">#d30000</color>
+    <color name="dialog_screen_middle">#63ceee</color>
+    <color name="dialog_screen_low">#7a7ae6</color>
+    <color name="dialog_screen_no">#d2d2d2</color>
+    <color name="drawer_layout_text">#525252</color>
+    <color name="em_activity_add_contact_edittext">#b3b3b3</color>
+    <color name="em_activity_add_contact_text">#0F0F0F</color>
+    <color name="em_activity_black_list_background">#f2f0eb</color>
+    <color name="em_activity_choosevideoactivity_background">#ff191919</color>
+    <color name="em_activity_group_details">#E6E6E6</color>
+    <color name="em_activity_group_pick_contacts">#eee</color>
+    <color name="em_activity_group_searcg_message_ll">#ededed</color>
+    <color name="em_activity_group_simel_details_text">#8F8F8F</color>
+    <color name="em_activity_group_simel_details">#080808</color>
+    <color name="em_activity_login_background">#eff2f6</color>
+    <color name="em_activity_offline_push">#cccccc</color>
+    <color name="em_activity_pick_contact_no_checkbox">#E2E2E2</color>
+    <color name="em_activity_user_profile">#3366cc</color>
+    <color name="em_activity_video_call_text">#afff</color>
+    <color name="em_activity_video_call">#666167</color>
+    <color name="em_activity_voice_call_background">#252C39</color>
+    <color name="em_listview_footer_view_ll">#E8E7E5</color>
+    <color name="em_row_add_group">#8C8C8C</color>
+    <color name="em_row_add_group_text">#E0E0E0</color>
+    <color name="em_row_invite_msg">#888888</color>
+    <color name="em_row_invite_msg_view">#dfdfdf</color>
+    <color name="em_widget_contact_item_text">#8a99ac</color>
+    <color name="fragment_home_unSelectedIndicatorColor">#99ffffff</color>
+    <color name="jpush_webview_layout_rl">#29313a</color>
+    <color name="tb_munion_adview_view">#008bea</color>
+    <color name="umeng_update_dialog_background">#99232323</color>
+    <color name="umeng_update_dialog_button">#AAABAF</color>
+
+    <color name="highlighted_text_material_dark">#6680cbc4</color>
+    <color name="highlighted_text_material_light">#66009688</color>
+    <color name="text_colorf7">#f7f7f7</color>
+    <color name="text_color87">#878787</color>
+    <color name="text_color82">#828282</color>
+    <color name="text_color92">#929292</color>
+
+    <color name = "education_background">#F9F9F7</color>
+    <color name="education_type_background">#E3E5D8</color>
+    <color name="education_border_color">#CCCCCC</color>
+    <color name="education_count">#393939</color>
+
+    <color name="btn_bottom_red">#ee452f</color>
+
+    <color name="classz_moments_list_item_title_pic_background">#F7F7F7</color>
+    <color name="classz_moments_add_document_label_background">#F6F6F6</color>
+    <color name="classz_moments_add_document_tag_background">#F8F8F8</color>
+    <color name="classz_moments_add_document_tag_background_click">#D3D9A9</color>
+
+    <color name="classz_moments_add_document_tag_name">#333333</color>
+    <color name="classz_moments_type_mements_text_color">#7DC0A6</color>
+    <color name="classz_moments_type_honour_text_color">#1296DB</color>
+    <color name="classz_moments_type_document_text_color">#FBC523</color>
+    <color name="classz_moments_add_document_attachment_background">#EEEEEE</color>
+    <color name="hint_color">#cccccc</color>
+
+    <color name="camera_scan_corner">#65E102</color>
+    <color name="clickable_text">#576B95</color>
+
+
+    <!--接送-->
+    <color name="pick_up_teacher_text_color">#9AA56A</color>
+
+    <color name="leave_bj">#4fb75b</color>
+    <color name="leave_sj">#efa446</color>
+    <color name="leave_hj">#a1b944</color>
+    <color name="leave_qt">#4260af</color>
+
+    <color name="leave_back">#e35666</color>
+    <color name="leave_agree">#50b85c</color>
+    <color name="leave_audit">#61add0</color>
+
+    <color name="repair_gz">#4fb75b</color>
+    <color name="repair_yh">#efa446</color>
+    <color name="repair_zg">#a1b944</color>
+    <color name="repair_sj">#4260af</color>
+
+    <!--语文  #c4e700
+数学  #e59e01
+英语  #4cda5d
+化学  #ff7005
+体育  #7c90e0
+美术  #5fb6da
+音乐  #ff3399
+科学   #99ffcc
+信息技术  #9933ff
+品德  #66cc00-->
+
+    <color name="chinese">#c4e700</color>
+    <color name="math">#e59e01</color>
+    <color name="english">#4cda5d</color>
+    <color name="chemistry">#ff7005</color>
+    <color name="pe">#7c90e0</color>
+    <color name="art">#5fb6da</color>
+    <color name="music">#ff3399</color>
+    <color name="science">#99ffcc</color>
+    <color name="information_tec">#9933ff</color>
+    <color name="morality">#66cc00</color>
+
+
+    <!--成长档案-->
+    <color name="growth_moral_plus">#399ec2</color>
+    <color name="growth_moral_reduce">#dc6969</color>
+
+    <!--作业管理-->
+    <color name="homework_ywj">#c4e600</color>
+    <color name="homework_yfb">#f1c40e</color>
+
+    <color name="homework_ytj">#43d6bf</color>
+    <color name="homework_dtj">#db6763</color>
+
+    <color name="list_title_bgc">#E7E7E7</color>
+    <color name="list_title_text_color">#4C4C4C</color>
+    <!--选课-->
+    <color name="selection_num">#767676</color>
+
+    <color name="uvv_gray">#969696</color>
+    <color name="uvv_black">#ff000000</color>
+    <color name="uvv_light_gray">#ffF0F0F0</color>
+    <color name="uvv_titlebar_bg">#7f000000</color>
+
+
+    <!--音视频-->
+    <color name="video_bg">#ba1d1d1d</color>
+    <color name="video_btn_bg">#e9e9e9</color>
+
+</resources>

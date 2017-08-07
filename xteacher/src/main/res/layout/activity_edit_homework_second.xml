@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:id="@+id/rl"
+    android:background="@color/white"
+    >
+    <include
+        android:id="@+id/title_in"
+        layout="@layout/title_bar"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_above="@id/bottom_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:paddingLeft="@dimen/dp_15"
+            android:paddingRight="@dimen/dp_15">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <ImageView
+                    android:id="@+id/activity_work_preview_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp_25"
+                    android:src="@mipmap/press_voice" />
+
+                <TextView
+                    android:id="@+id/activity_work_preview_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:textColor="@color/text_colord2"
+                    android:text="@string/homework_press_voilce"
+                    android:textSize="@dimen/sp14" />
+                <LinearLayout
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:padding="@dimen/dp_10"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+                    <TextView
+                        style="@style/text_16sp_color28"
+                        android:text="@string/teacher_voice" />
+                    <TextView
+                        android:id="@+id/bainji_iv_previewa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:visibility="visible"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:drawablePadding="@dimen/dp_15"
+                        android:drawableLeft="@mipmap/voice_more"
+                        android:textSize="@dimen/sp14"
+                        android:text="@string/homework_press_voilce18s"/>
+                    <ImageView
+                        android:id="@+id/activity_work_preview_voicedel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/dp_2"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:src="@mipmap/del" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:padding="@dimen/dp_10"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_white_round_bg">
+                    <TextView
+                        style="@style/text_16sp_color28"
+                        android:text="@string/content"
+                        />
+                    <EditText
+                        android:id="@+id/content_et"
+                        style="@style/edt_minHight_16sp_color28"
+                        />
+                </LinearLayout>
+                <com.zjhz.teacher.ui.view.images.view.PicturesPreviewer
+                    android:id="@+id/recycler_images"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="@dimen/lay_12"
+                    android:paddingRight="@dimen/lay_12"
+                    android:paddingTop="@dimen/lay_12" />
+              <!--  <com.zjhz.teacher.ui.view.ScrollViewWithGridView
+                    android:id="@+id/homework_pic_gv"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:listSelector="@color/transparent"
+                    android:numColumns="3"
+                    android:verticalSpacing="@dimen/dp_2"
+                    android:horizontalSpacing="@dimen/dp_2"
+                    />-->
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</LinearLayout>

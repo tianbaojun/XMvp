@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/input_dialog_board"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:background="@drawable/yuanjiao_small"
+        android:layout_height="@dimen/dp_240"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/dp_20"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:id="@+id/dialog_leave_state_one"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:background="@drawable/yuanjiao_left_top"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/dialog_leave_state_cancle"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16"
+                android:paddingLeft="@dimen/dp_15"
+                android:gravity="center_vertical"
+                android:text="@string/pickerview_cancel" />
+
+            <TextView
+                android:id="@+id/dialog_leave_state_ok"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingRight="@dimen/dp_15"
+                android:gravity="center_vertical|right"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16"
+                android:text="@string/send_out" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/dialog_leave_state_one"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/dp_15"
+            android:background="@drawable/yuanjiao"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_8"
+                android:textColor="@color/text_color32"
+                android:textSize="@dimen/sp_16"
+                android:layout_gravity="left"
+                android:text="@string/treatment_opinion"/>
+
+            <EditText
+                android:id="@+id/dialog_leave_state_ed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:padding="@dimen/dp_8"
+                android:gravity="left"
+                android:lines="5"
+                android:maxLength="25"
+                android:hint="@string/can_enter_up_to_25_words"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

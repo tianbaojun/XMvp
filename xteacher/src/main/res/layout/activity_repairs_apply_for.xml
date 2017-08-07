@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <include layout="@layout/title_bar" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/repairs_name_tv"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:textColor="@color/text_color65"
+                    android:text="报修人：" />
+                <TextView
+                    android:id="@+id/repairs_time_tv"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/text_color65"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="@dimen/dp_15"
+                    android:text="报修时间：" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/type_ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:background="@drawable/shape_white_round_bg"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10">
+                <TextView
+                    style="@style/text_16sp_color28"
+                    android:text="@string/item_name" />
+                <EditText
+                    android:id="@+id/repairsgoods_name_tv"
+                    style="@style/edt_16sp_color28"
+                     />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/address_ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_15"
+                android:background="@drawable/shape_white_round_bg"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10">
+                <TextView
+                    style="@style/text_16sp_color28"
+                    android:text="@string/repair_site" />
+
+                <EditText
+                    android:id="@+id/repairsaddress_tv"
+                    style="@style/edt_16sp_color28"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/department_manager_ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:layout_margin="@dimen/dp_15"
+                android:background="@drawable/shape_white_round_bg"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10">
+                <TextView
+                    style="@style/text_16sp_color28"
+                    android:text="@string/repair_department" />
+                <TextView
+                    android:id="@+id/repairsdepartment_manager_tv"
+                    style="@style/edt_16sp_color28"
+                    android:drawableRight="@mipmap/spinner_icon"
+                     />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:background="@drawable/shape_white_round_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_10">
+                <TextView
+                    style="@style/text_16sp_color28"
+                    android:text="@string/situation_description" />
+                <EditText
+                    android:id="@+id/repairsdescri_content_tv"
+                    android:padding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:minHeight="60dp"
+                    android:textColor="@color/text_color28"
+                    android:textSize="@dimen/sp_16"
+                    android:hint="@string/please_briefly_describe_the_situation_of_things" />
+            </LinearLayout>
+
+            <com.zjhz.teacher.ui.view.images.view.PicturesPreviewer
+                android:id="@+id/recycler_images"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/lay_12"
+                android:paddingLeft="@dimen/lay_12"
+                android:paddingRight="@dimen/lay_12"
+                android:paddingTop="@dimen/lay_12" />
+           <!-- <com.zjhz.teacher.ui.view.ScrollViewWithGridView
+                android:id="@+id/repairs_pic_gv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_35"
+                android:horizontalSpacing="@dimen/dp_2"
+                android:listSelector="@color/transparent"
+                android:numColumns="3"
+                android:paddingTop="@dimen/dp_10"
+                android:verticalSpacing="@dimen/dp_2" />-->
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

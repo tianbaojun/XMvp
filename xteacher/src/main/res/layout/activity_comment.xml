@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/ll"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/title_bar"/>
+    <include layout="@layout/comment_title"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0.5"
+        android:background="@color/text_colore5"/>
+    <include layout="@layout/refresh_layout"/>
+</LinearLayout>

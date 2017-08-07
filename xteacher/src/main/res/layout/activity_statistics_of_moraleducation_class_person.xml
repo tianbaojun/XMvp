@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_colore5"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dp_10"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_10"
+        android:text="2016年9月1红领巾专项教育汇总"/>
+
+    <LinearLayout
+        android:id="@+id/statistics_of_class_title"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/text_14sp_color28"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="班级名称" />
+
+        <View
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <TextView
+            style="@style/text_14sp_color28"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="分数" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/statistics_of_person_title"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/text_14sp_color28"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="学生姓名" />
+
+        <View
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"></View>
+
+        <TextView
+            style="@style/text_14sp_color28"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="分数" />
+    </LinearLayout>
+
+    <include layout="@layout/refresh_layout" />
+
+</LinearLayout>

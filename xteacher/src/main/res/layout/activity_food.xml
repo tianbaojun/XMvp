@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/refresh_ll">
+    <include layout="@layout/title_bar" android:id="@+id/title_bar"/>
+    <include layout="@layout/refresh_delete_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_bar"/>
+    <RelativeLayout
+        android:id="@+id/comment_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/dp_5"
+        android:visibility="gone"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/send_tv"
+            android:background="@drawable/btn_rectangle_radio_gray_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="@string/activity_classz_moments_send"/>
+        <EditText
+            android:id="@+id/comment_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:padding="@dimen/dp_5"
+            android:textSize="@dimen/sp12"
+            android:background="@drawable/btn_rectangle_radio_gray_background"
+            android:layout_toLeftOf="@id/send_tv"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+</RelativeLayout>

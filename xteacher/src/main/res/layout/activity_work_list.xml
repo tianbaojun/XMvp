@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/title_bar"/>
+    <LinearLayout
+        android:padding="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/text_colore5"
+        >
+        <TextView
+            android:text="@string/work_manager_one"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color28"
+            android:textSize="@dimen/sp_14"
+            />
+        <TextView
+            android:text="@string/work_manager_two"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color28"
+            android:textSize="@dimen/sp_14"
+            />
+        <TextView
+            android:text="@string/work_manager_three"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color28"
+            android:textSize="@dimen/sp_14"
+            />
+        <TextView
+            android:text="@string/work_manager_four"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color28"
+            android:textSize="@dimen/sp_14"
+            />
+    </LinearLayout>
+    <include layout="@layout/refresh_layout"/>
+</LinearLayout>

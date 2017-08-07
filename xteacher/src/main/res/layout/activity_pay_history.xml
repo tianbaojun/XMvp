@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_pay_history"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context="com.zjhz.teacher.ui.activity.PayHistoryActivity">
+    <include layout="@layout/title_bar"/>
+
+    <com.zjhz.teacher.ui.view.RefreshLayout
+        android:id="@+id/pay_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.zjhz.teacher.ui.view.listview.PinnedHeaderExpandableListView
+            android:id="@+id/pinned_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="1dp"
+            android:divider="#00000000"/>
+    </com.zjhz.teacher.ui.view.RefreshLayout>
+</LinearLayout>

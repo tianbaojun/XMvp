@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <include
+        layout="@layout/title_bar" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_43"
+        android:layout_marginBottom="@dimen/dp_52"
+        android:scrollbars="none">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/news_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_40"
+            android:lineSpacingExtra="2dp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_20" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/news_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray9"
+                android:textSize="@dimen/sp_12"/>
+
+            <TextView
+                android:id="@+id/news_creat_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:textColor="@color/gray9"
+                android:textSize="@dimen/sp_12" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_3"
+                android:src="@mipmap/news_review_count"/>
+            <TextView
+                android:id="@+id/news_brow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray9"
+                android:textSize="@dimen/sp_12" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_c"/>
+        <WebView
+            android:id="@+id/web"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_10"
+            android:scrollbars="none" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_25"
+            android:background="@color/white">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:gravity="center_vertical"
+                android:background="@color/gray_f0">
+                <View
+                    android:layout_width="@dimen/dp_6"
+                    android:layout_height="fill_parent"
+                    android:background="@color/gray9" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/pinglun3"
+                    android:layout_marginLeft="@dimen/dp_20"/>
+                <TextView
+                    android:id="@+id/comment_count"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="评论？条"
+                    android:textColor="@color/gray6"
+                    android:textSize="@dimen/sp_14"
+                    android:layout_gravity="center_vertical" />
+
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/hint_nocomment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/nocomment"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_gravity="center"
+                android:visibility="gone">
+            </RelativeLayout>
+        </LinearLayout>
+
+        <com.zjhz.teacher.ui.view.ScrollViewWithListView
+            android:id="@+id/refresh_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:listSelector="@color/lightest_gray"
+            android:divider="@null"
+            android:scrollbars="none"/>
+        <LinearLayout
+            android:id="@+id/look_more_ll"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:visibility="gone">
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:drawablePadding="@dimen/dp_8"
+                android:textColor="@color/text_color65"
+                android:text="@string/see_more_comments"
+                android:gravity="center"
+                android:drawableRight="@mipmap/enter_icon"
+                android:background="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent" />
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+
+
+    <!--<com.zjhz.teacher.ui.view.RefreshLayout-->
+        <!--android:id="@+id/refresh_layout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_marginBottom="@dimen/dp_50">-->
+        <!--<com.zjhz.teacher.ui.view.ScrollViewWithListView-->
+            <!--android:id="@+id/refresh_listview"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:listSelector="@color/lightest_gray"-->
+            <!--android:divider="@null" />-->
+    <!--</com.zjhz.teacher.ui.view.RefreshLayout>-->
+
+    <RelativeLayout
+        android:id="@+id/edit_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <LinearLayout
+            android:id="@+id/edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/text_colore5"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_28">
+
+                <TextView
+                    android:id="@+id/cancel_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="bottom"
+                    android:textSize="@dimen/sp_16"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:text="@string/cancels" />
+
+                <TextView
+                    android:id="@+id/sure_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="bottom"
+                    android:textSize="@dimen/sp_16"
+                    android:paddingRight="@dimen/dp_15"
+                    android:textColor="#849f00"
+                    android:text="发送" />
+            </RelativeLayout>
+            <EditText
+                android:id="@+id/et1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_100"
+                android:layout_margin="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/shape_white_round_bg_green_red"
+                android:gravity="top"
+                android:hint="@string/add_comments_no_more_than_200_words"
+                android:maxLength="200"
+                android:padding="@dimen/dp_5"
+                android:textColor="@color/text_color28"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+        <View
+            android:id="@+id/blank"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/edit"
+            android:background="@color/activity_newsdetail_view" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/hint_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/text_colore5"
+        android:visibility="visible"
+        android:layout_gravity="bottom"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_margin="@dimen/dp_8"
+            android:id="@+id/et"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_white_round_bg"
+            android:focusable="false"
+            android:gravity="center"
+            android:hint="@string/add_comments_no_more_than_200_words"
+            android:padding="@dimen/dp_5" />
+        <FrameLayout
+            android:id="@+id/dianzan_pinglun_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_5">
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dp_8"
+                android:src="@mipmap/pinglun4"
+                android:visibility="visible" />
+            <TextView
+                android:id="@+id/dianzan_pinglun_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/dp_12"
+                android:gravity="center"
+                android:layout_gravity="right|top"
+                android:background="@drawable/pinglun_count_red_circle"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:visibility="gone"/>
+        </FrameLayout>
+        <ImageView
+            android:id="@+id/dianzan_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dp_8"
+            android:src="@mipmap/dianzan2_nor_1"
+            android:visibility="visible" />
+        <ImageView
+            android:id="@+id/bainji_iv"
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="match_parent"
+            android:src="@mipmap/bianji"
+            android:padding="@dimen/dp_8"
+            android:visibility="visible" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/dian_zhan_qp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_8"
+        android:src="@mipmap/dianzhan_qp"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="@dimen/dp_35"
+        android:layout_marginBottom="@dimen/dp_25"
+        android:visibility="gone"/>
+</FrameLayout>

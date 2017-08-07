@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/add_share"
+        android:title="@string/classz_moments_activity_tab_title_classz_moments"
+        android:orderInCategory="100"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/add_document"
+        android:title="@string/activity_classz_moments_add_document_title"
+        android:orderInCategory="100"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/add_honour"
+        android:title="@string/activity_classz_moments_add_honour_roll_title"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+</menu>

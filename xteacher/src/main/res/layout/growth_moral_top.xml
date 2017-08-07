@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_35"
+    android:paddingTop="@dimen/dp_10"
+    android:background="@color/white">
+    <View
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp_10"
+        android:text="全部"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/white"
+        android:background="@drawable/growth_moral_btn_click"/>
+    <TextView
+        android:id="@+id/score_reduce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp_10"
+        android:text="减分"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/gray6"
+        android:background="@drawable/growth_moral_btn_unclick"/>
+    <TextView
+        android:id="@+id/score_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp_20"
+        android:text="加分"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/gray6"
+        android:background="@drawable/growth_moral_btn_unclick"/>
+</LinearLayout>

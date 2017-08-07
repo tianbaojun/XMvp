@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <!--<com.zjhz.app.ui.view.RoundImageView
+        xmlns:pv="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/user_head"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/defult_man"
+        pv:border_outside_color="#ffffff"
+        android:layout_gravity="center_vertical"
+        pv:border_thickness="1dp"  />-->
+    <com.zjhz.teacher.ui.view.CircleImageView
+        android:id="@+id/user_head"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:contentDescription="@null"
+        android:src="@mipmap/header"
+        app:border_color="@color/transparent"
+        app:border_width="@dimen/dp_0" />
+</LinearLayout>

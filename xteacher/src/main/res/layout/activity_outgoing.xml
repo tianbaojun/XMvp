@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/title_bar"/>
+    <LinearLayout
+        android:layout_margin="@dimen/dp_15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/dp_140"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_8"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <EditText
+                android:id="@+id/outgoing_reason_et"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/text_color28"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:minHeight="@dimen/dp_130"
+                android:gravity="top"
+                android:maxLength="20"
+                android:hint="@string/reasons_to_go_out_the_content_of_up_to_80_characters"
+                />
+            <TextView
+                android:id="@+id/size_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textSize="@dimen/sp_12"
+                android:textColor="@color/text_color65"
+                android:text="20/20"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

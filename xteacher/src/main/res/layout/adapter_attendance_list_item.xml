@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/item_selector_backgroud"
+    >
+    <LinearLayout
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/adapter_attendance_list_item_name"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/text_color28"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/adapter_attendance_list_item_time"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:lineSpacingExtra="@dimen/dp_2"
+            android:textColor="@color/text_color28"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/adapter_attendance_list_item_location"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:textColor="@color/text_color28"
+            android:lineSpacingExtra="@dimen/dp_2"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/adapter_attendance_list_item_campu"
+            android:layout_width="@dimen/dp_0"
+            android:textColor="@color/text_color28"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"/>
+    </LinearLayout>
+    <View
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/text_colore5"/>
+
+</LinearLayout>

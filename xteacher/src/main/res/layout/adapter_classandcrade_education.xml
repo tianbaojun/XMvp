@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_45"
+    android:background="@drawable/item_selector_backgroud">
+
+    <ImageView
+        android:id="@+id/adapter_classandcrade_education_checked_iv"
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:paddingRight="@dimen/dp_15"
+        android:paddingLeft="@dimen/dp_15"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/selectfalse_icon"
+        android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/adapter_classandcrade_education_ll"
+            android:layout_toRightOf="@+id/adapter_classandcrade_education_checked_iv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/adapter_classandcrade_education_person_tv"
+                android:layout_width="@dimen/dp_0"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="@string/one_grade"
+                android:gravity="center"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/text_color28"
+                android:singleLine="true"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/adapter_classandcrade_education_tv"
+                android:layout_width="@dimen/dp_0"
+                android:layout_weight="1.5"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/special_inspection"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/text_color28" />
+
+            <TextView
+                android:id="@+id/adapter_classandcrade_education_time_tv"
+                android:layout_width="@dimen/dp_0"
+                android:layout_weight="1.5"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="@dimen/sp_14"
+                android:layout_gravity="right"
+                android:textColor="@color/text_color28"
+                android:text="2016-09-05 08：55" />
+
+        </LinearLayout>
+        <View
+            android:layout_below="@+id/adapter_classandcrade_education_ll"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/text_colore5" />
+</RelativeLayout>
+

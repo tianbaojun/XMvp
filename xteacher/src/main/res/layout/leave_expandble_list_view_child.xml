@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_45"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        >
+        <TextView
+            android:id="@+id/leave_expandble_list_view_child_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/text_color28"
+            android:textSize="@dimen/sp15" />
+
+        <!--   <CheckBox
+               android:id="@+id/leave_expandble_list_view_child_image"
+               style="@style/mycheckbox"
+               android:layout_width="wrap_content"
+               android:layout_height="35dp"
+               android:layout_centerVertical="true"
+               android:layout_alignParentRight="true"
+               android:layout_marginRight="5dp" />
+       -->
+        <ImageView
+            android:id="@+id/leave_expandble_list_view_child_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_15"
+            android:src="@mipmap/leave_expandble_child_unclicked"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        android:background="@color/text_colore5"
+        />
+</LinearLayout>

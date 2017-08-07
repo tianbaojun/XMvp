@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_classz_moments"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/AppBaseTheme"
+    tools:context="pro.ui.activity.ClasszMomentsActivity">
+
+    <include layout="@layout/title_bar" android:id="@+id/title_bar" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/sliding_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_bar"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:layout_below="@id/sliding_tabs"/>
+
+    <RelativeLayout
+        android:id="@+id/comment_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/dp_5"
+        android:visibility="gone"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/send_tv"
+            android:background="@drawable/btn_rectangle_radio_gray_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="@string/activity_classz_moments_send"/>
+        <EditText
+            android:id="@+id/comment_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:padding="@dimen/dp_5"
+            android:textSize="@dimen/sp12"
+            android:background="@drawable/btn_rectangle_radio_gray_background"
+            android:layout_toLeftOf="@id/send_tv"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <!--<pro.widget.InputView.ChatInputMenu
+        android:id="@+id/input_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"/>-->
+
+
+</RelativeLayout>

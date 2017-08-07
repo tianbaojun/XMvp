@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <TextView
+        android:id="@+id/loading_tv"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/week_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/text_color28"
+        android:background="@color/text_colore5"
+        android:padding="@dimen/dp_10"
+        android:gravity="center" />
+
+    <RelativeLayout
+        android:padding="@dimen/space_13"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/hint_tv"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:text="@string/leadership_of_week"
+            android:textColor="@color/text_coloree452f"
+            android:textSize="@dimen/sp_14"
+            />
+        <TextView
+            android:textColor="@color/text_coloree452f"
+            android:id="@+id/text_ll"
+            android:layout_marginLeft="98dp"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <!--<TextView
+            android:id="@+id/tv_duty_new"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_toRightOf="@+id/hint_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/text_coloree452f"
+            android:textSize="@dimen/sp_14" />-->
+    </RelativeLayout>
+    <View
+        android:layout_marginLeft="@dimen/space_13"
+        android:layout_marginRight="@dimen/space_13"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/text_colore5"
+        />
+    <ListView
+        android:id="@+id/listview"
+        android:divider="@null"
+        android:listSelector="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

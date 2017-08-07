@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/main_frame"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:layout_weight="7"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="#f2f2f2"
+        android:layout_height="@dimen/dp_0"
+        android:layout_weight="0.65">
+        <Button
+            android:id="@+id/tab_btn_home"
+            style="@style/main_tab_button"
+            android:drawableTop="@drawable/tab_home"
+            android:text="@string/home"/>
+        <RelativeLayout
+            android:id="@+id/btn_msg"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+            <Button
+                android:id="@+id/tab_btn_message"
+                style="@style/main_tab_button"
+                android:drawableTop="@drawable/tab_message"
+                android:text="@string/message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/main_bottom_button"
+                android:paddingBottom="@dimen/dp_2"
+                android:paddingTop="@dimen/space_7"
+                android:scaleType="matrix"
+                android:background="@null"
+                android:textSize="@dimen/sp12" />
+            <TextView
+                android:id="@+id/unread_msg_number1"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_20"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_12"
+                android:layout_marginTop="@dimen/dp_1"
+                android:background="@drawable/em_unread_count_bg"
+                android:gravity="center"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="@dimen/sp10"
+                android:visibility="gone" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/btn_container_conversation"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/tab_btn_exchange"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/main_bottom_button"
+                android:drawableTop="@drawable/tab_exchange"
+                android:paddingBottom="@dimen/dp_2"
+                android:paddingTop="@dimen/space_7"
+                android:scaleType="matrix"
+                android:background="@null"
+                android:text="@string/exchange"
+                android:textSize="@dimen/sp12" />
+
+            <TextView
+                android:id="@+id/unread_msg_number"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_20"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_12"
+                android:layout_marginTop="@dimen/dp_1"
+                android:background="@drawable/em_unread_count_bg"
+                android:gravity="center"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="@dimen/sp10"
+                android:visibility="invisible" />
+        </RelativeLayout>
+        <!--<Button
+            android:id="@+id/tab_btn_exchange"
+            style="@style/main_tab_button"
+            android:drawableTop="@drawable/tab_exchange"
+            android:text="@string/exchange"/>-->
+        <Button
+            android:id="@+id/tab_btn_mine"
+            style="@style/main_tab_button"
+            android:drawableTop="@drawable/tab_mine"
+            android:text="@string/mine"/>
+
+    </LinearLayout>
+</LinearLayout>
+

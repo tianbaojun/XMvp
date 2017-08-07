@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_classz_moments_add_document"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="pro.ui.activity.ClasszMomentsAddDocumentActivity">
+
+    <include layout="@layout/title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dp_5">
+
+            <EditText
+                android:id="@+id/content_et"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_100"
+                android:gravity="top"
+                android:hint="@string/classz_moments_add_document_idea"
+                android:background="@color/white"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/sp12"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/dp_10">
+
+                <RelativeLayout
+                    android:id="@+id/document"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/document_label"
+                    android:background="@color/classz_moments_add_document_attachment_background"
+                    android:padding="@dimen/dp_10">
+
+                    <ImageView
+                        android:id="@+id/document_icon"
+                        android:layout_width="@dimen/dp_60"
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_marginRight="@dimen/dp_20"
+                        android:src="@mipmap/document" />
+
+
+                    <ImageView
+                        android:id="@+id/cancel"
+                        android:layout_width="@dimen/dp_10"
+                        android:layout_height="@dimen/dp_10"
+                        android:src="@mipmap/delete"/>
+
+                    <TextView
+                        android:id="@+id/document_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_toRightOf="@id/document_icon"
+                        android:textSize="@dimen/sp15" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/document_label"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_60"
+                    android:padding="@dimen/dp_10"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/classz_moments_add_document_attachment_icon" />
+            </RelativeLayout>
+
+            <com.zjhz.teacher.ui.view.ScrollViewWithListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:dividerHeight="@dimen/dp_0"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/doc_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

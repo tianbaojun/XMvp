@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/dp_15"
+    android:paddingTop="@dimen/dp_15"
+    android:background="@drawable/item_selector_backgroud"
+    >
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_marginTop="@dimen/dp_3"
+                android:layout_width="36.5dp"
+                android:layout_height="36.5dp"
+                android:src="@mipmap/school_news_icon1"
+                />
+            <ImageView
+                android:id="@+id/oval_iv"
+                android:background="@drawable/shape_oval_red"
+                android:layout_alignParentRight="true"
+                android:layout_width="8dp"
+                android:layout_height="8dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/content_tv"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="@color/text_color28"
+                android:textSize="@dimen/sp_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:paddingBottom="@dimen/space_13"
+                android:layout_marginTop="@dimen/space_13"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/time_tv"
+                    android:textColor="@color/text_color65"
+                    android:textSize="@dimen/sp_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:text="@string/view_details"
+                    android:drawableRight="@mipmap/news_enter_icon"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:textColor="@color/text_color65"
+                    android:textSize="@dimen/sp_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/text_colore5"
+        />
+</LinearLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/dialog_screen_height"
+        style="@style/fly_ll_common_itme"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/person_hight_grade" />
+
+        <TextView
+            style="@style/fly_text_common"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="6"
+            android:textColor="@color/main_bottom_text_color"
+            android:text="@string/high_priority" />
+
+        <ImageView
+            android:id="@+id/dialog_screen_height_img"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:src="@mipmap/person_grade_selected" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0.5"
+        android:background="@color/text_color9c"/>
+
+    <LinearLayout
+    android:id="@+id/dialog_screen_center"
+    style="@style/fly_ll_common_itme"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@mipmap/person_center_grade" />
+
+    <TextView
+        style="@style/fly_text_common"
+        android:layout_width="@dimen/dp_0"
+        android:layout_weight="6"
+        android:textColor="@color/dialog_screen_middle"
+        android:text="@string/middle_priority" />
+
+    <ImageView
+        android:id="@+id/dialog_screen_center_img"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:src="@mipmap/person_grade_selected" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0.5"
+        android:background="@color/text_color9c"/>
+
+    <LinearLayout
+        android:id="@+id/dialog_screen_low"
+        style="@style/fly_ll_common_itme"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/person_low_grade" />
+
+        <TextView
+            style="@style/fly_text_common"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="6"
+            android:textColor="@color/dialog_screen_low"
+            android:text="@string/low_priority" />
+
+        <ImageView
+            android:id="@+id/dialog_screen_low_img"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:src="@mipmap/person_grade_selected" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0.5"
+        android:background="@color/text_color9c"/>
+
+    <LinearLayout
+        android:id="@+id/dialog_screen_none"
+        style="@style/fly_ll_common_itme"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/person_none_grade" />
+
+        <TextView
+            style="@style/fly_text_common"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="6"
+            android:textColor="@color/dialog_screen_no"
+            android:text="@string/no_priority" />
+
+        <ImageView
+            android:id="@+id/dialog_screen_none_img"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:src="@mipmap/person_grade_selected" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0.5"
+        android:background="@color/text_color9c"/>
+
+
+
+</LinearLayout>

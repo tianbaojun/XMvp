@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_company_news_comment_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="pro.ui.activity.CompanyNewsCommentDetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/hint_rl"
+            android:orientation="vertical">
+
+            <include layout="@layout/title_bar" />
+
+            <include layout="@layout/activity_listview" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/hint_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="@color/text_colore5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/et"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp_8"
+                android:layout_weight="1"
+                android:background="@drawable/shape_white_round_bg"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="@string/add_comments_no_more_than_200_words"
+                android:padding="@dimen/dp_5" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/edit_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/text_colore5"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_28">
+
+                <TextView
+                    android:id="@+id/cancel_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="bottom"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:text="@string/cancels"
+                    android:textSize="@dimen/sp_16" />
+
+                <TextView
+                    android:id="@+id/sure_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="bottom"
+                    android:paddingRight="@dimen/dp_15"
+                    android:text="发送"
+                    android:textColor="#849f00"
+                    android:textSize="@dimen/sp_16" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/et1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_100"
+                android:layout_margin="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/shape_white_round_bg_green_red"
+                android:gravity="top"
+                android:hint="@string/add_comments_no_more_than_200_words"
+                android:maxLength="200"
+                android:padding="@dimen/dp_5"
+                android:textColor="@color/text_color28"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/blank"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/edit"
+            android:background="@color/activity_newsdetail_view" />
+    </RelativeLayout>
+
+</FrameLayout>

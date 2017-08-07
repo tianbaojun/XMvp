@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chat_menu_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@color/gray_f0"
+    android:orientation="vertical">
+
+    <!-- <com.hyphenate.easeui.widget.EaseChatPrimaryMenu
+        android:id="@+id/primary_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" /> -->
+
+    <LinearLayout
+        android:id="@+id/primary_menu"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/msg_text_ed"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@null" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/dp_3"
+                android:layout_marginTop="@dimen/dp_2"
+                android:background="@color/title_background_red" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/emoji_img"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="match_parent"
+            android:src="@drawable/ease_chatting_biaoqing_btn_normal" />
+        <!--@drawable/ease_chatting_biaoqing_btn_enable-->
+        <TextView
+            android:id="@+id/send_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@drawable/btn_send_msg"
+            android:padding="@dimen/dp_5"
+            android:text="发送"
+            android:textColor="@color/gray_c"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+
+    <com.zjhz.teacher.hx.widget.emojicon.EaseEmojiconMenu
+        android:id="@+id/emojicon_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+
+</LinearLayout>

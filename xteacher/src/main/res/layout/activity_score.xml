@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/score_drawerlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/title_bar"/>
+        <LinearLayout
+            android:padding="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/text_colore5"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/text_color28"
+                android:text="@string/type_no"/>
+            <TextView
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/text_color28"
+                android:text="@string/work_manager_two"/>
+            <TextView
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/text_color28"
+                android:text="@string/work_manager_one"/>
+            <TextView
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/text_color28"
+                android:gravity="center"
+                android:text="@string/teacher_name"/>
+            <TextView
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:textColor="@color/text_color28"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/work_manager_four"/>
+        </LinearLayout>
+        <include layout="@layout/refresh_layout"/>
+    </LinearLayout>
+    <include layout="@layout/drawer_score_layout" />
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:id="@+id/img_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/filter_img"
+        android:layout_width="@dimen/dp_90"
+        android:layout_height="@dimen/dp_90"
+        android:src="@mipmap/pic_add_icon"
+        android:visibility="visible"
+        android:scaleType="fitXY"
+        />
+  <!--  <Button
+        android:id="@+id/commit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-10dp"
+        android:background="@mipmap/del"
+        android:gravity="center"
+         />-->
+    <!--android:scaleType="fitXY"-->
+
+</LinearLayout>

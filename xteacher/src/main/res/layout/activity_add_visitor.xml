@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="visitor"
+            type="com.zjhz.teacher.bean.VisitorBean" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_visitor_add_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_bg"
+        android:orientation="vertical"
+        tools:context="com.zjhz.teacher.ui.activity.AddVisitorActivity">
+
+        <include layout="@layout/title_bar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/row_item_text_left"
+                        android:text="@string/visitor_name1"
+                        android:textSize="@dimen/sp_16" />
+
+                    <EditText
+                        android:id="@+id/visit_name_ed"
+                        style="@style/row_item_edit_right"
+                        android:hint="@string/visitor_name_hint"
+                        android:imeOptions="actionNext"
+                        android:maxLines="1"
+                        android:paddingTop="@dimen/dp_5"
+                        android:text="@={visitor.visitorName}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/row_item_text_left"
+                        android:text="@string/visitor_phone"
+                        android:textSize="@dimen/sp_16" />
+
+                    <EditText
+                        android:id="@+id/visit_phone_ed"
+                        style="@style/row_item_edit_right"
+                        android:hint="@string/visitor_phone_hint"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        android:maxLines="1"
+                        android:text="@={visitor.visitorPhone}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/row_item_text_left"
+                        android:text="@string/visitor_num"
+                        android:textSize="@dimen/sp_16" />
+
+                    <EditText
+                        android:id="@+id/visit_num_ed"
+                        style="@style/row_item_edit_right"
+                        android:gravity="left|center_vertical"
+                        android:hint="@string/visitor_num_hint"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:paddingTop="@dimen/dp_5"
+                        android:text="@={visitor.visitorNum}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/row_item_text_left"
+                        android:text="@string/visit_time1"
+                        android:textSize="@dimen/sp_16" />
+
+                    <TextView
+                        android:id="@+id/visit_time_tv"
+                        style="@style/row_item_edit_right"
+                        android:hint="@string/visit_time1_hint"
+                        android:imeOptions="actionNext"
+                        android:text="@={visitor.appointmentTime}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/row_item_text_left"
+                        android:text="@string/visit_company"
+                        android:textSize="@dimen/sp_16" />
+
+                    <EditText
+                        android:id="@+id/visit_company_ed"
+                        style="@style/row_item_edit_right"
+                        android:hint="@string/visit_company_hint"
+                        android:imeOptions="actionNext"
+                        android:maxLines="1"
+                        android:paddingTop="@dimen/dp_5"
+                        android:text="@={visitor.visitorOrg}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/row_item_text_left"
+                        android:gravity="center_vertical|top"
+                        android:paddingTop="@dimen/dp_10"
+                        android:text="@string/visit_reason" />
+
+                    <EditText
+                        android:id="@+id/visit_reason_ed"
+                        style="@style/row_item_text_right"
+                        android:background="@null"
+                        android:gravity="top|left"
+                        android:hint="@string/visit_reason_hint"
+                        android:lines="3"
+                        android:paddingTop="@dimen/dp_10"
+                        android:text="@={visitor.reason}" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/send_verify_code"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginLeft="@dimen/dp_50"
+            android:layout_marginRight="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_40"
+            android:background="@drawable/verify_code_btn_bg"
+            android:gravity="center"
+            android:text="@string/send_verify_code"
+            android:textColor="@color/orange_50"
+            android:textSize="@dimen/sp_18" />
+
+        <TextView
+            android:id="@+id/remarks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center"
+            android:text="@string/send_code_remarks"
+            android:textSize="@dimen/sp_12" />
+
+    </LinearLayout>
+</layout>

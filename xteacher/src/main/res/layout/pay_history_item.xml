@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="payOrderBean"
+            type="com.zjhz.teacher.NetworkRequests.response.PayOrderResponseBean"/>
+    </data>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_40"
+    android:background="@color/white"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{payOrderBean.week}"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/gray6"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{payOrderBean.monthDate}"
+            android:textSize="@dimen/sp_10"
+            android:textColor="@color/gray6"/>
+    </LinearLayout>
+
+    <com.zjhz.teacher.ui.view.CircleImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:src="@{payOrderBean.getPic()}"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/dp_30">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(-Float.parseFloat(payOrderBean.amount)/100)}"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/gray3"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="软件服务费"
+            android:textSize="@dimen/sp_10"
+            android:textColor="@color/gray6"/>
+    </LinearLayout>
+    <!--<ImageView style="@style/me_iv"-->
+        <!--android:layout_marginRight="@dimen/dp_20"/>-->
+</LinearLayout>
+</layout>

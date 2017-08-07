@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.zjhz.teacher.ui.view.RefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <com.zjhz.teacher.ui.view.SwipeListView
+            android:id="@+id/refresh_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:divider="@null"
+            android:listSelector="@color/white"
+            android:cacheColorHint="#00000000"/>
+    </com.zjhz.teacher.ui.view.RefreshLayout>
+</LinearLayout>

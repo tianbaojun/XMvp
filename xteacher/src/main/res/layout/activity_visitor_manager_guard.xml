@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="visitor"
+            type="com.zjhz.teacher.bean.VisitorBean" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_add_visitor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_bg"
+        android:orientation="vertical"
+        tools:context="com.zjhz.teacher.ui.activity.VisitorManagerGuardActivity">
+
+        <include layout="@layout/title_bar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/row_item_text_left"
+                        android:text="@string/visitor_name1" />
+
+                    <TextView
+                        android:id="@+id/visit_name_text"
+                        style="@style/row_item_text_right"
+                        android:imeOptions="actionNext"
+                        android:text="@{visitor.visitorName}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/row_item_text_left"
+                        android:text="@string/visitor_phone" />
+
+                    <TextView
+                        android:id="@+id/visit_phone_text"
+                        style="@style/row_item_text_right"
+                        android:imeOptions="actionNext"
+                        android:text="@{visitor.visitorPhone}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/row_item_text_left"
+                        android:text="@string/visitor_num"
+                        android:textSize="@dimen/sp_16" />
+
+                    <TextView
+                        android:id="@+id/visit_num_text"
+                        style="@style/row_item_text_right"
+                        android:imeOptions="actionNext"
+                        android:text="@{visitor.visitorNum}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        style="@style/row_item_text_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/visit_time1" />
+
+                    <TextView
+                        android:id="@+id/visit_time_text"
+                        style="@style/row_item_text_right"
+                        android:text="@{visitor.appointmentTime}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        style="@style/row_item_text_left"
+                        android:text="@string/visit_company"
+                        android:textSize="@dimen/sp_16" />
+
+                    <TextView
+                        android:id="@+id/visit_company_text"
+                        style="@style/row_item_text_right"
+                        android:paddingTop="@dimen/dp_5"
+                        android:text="@{visitor.visitorOrg}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/row_item_text_left"
+                        android:gravity="center_vertical|top"
+                        android:paddingTop="@dimen/dp_10"
+                        android:text="@string/visit_reason" />
+
+                    <TextView
+                        android:id="@+id/visit_reason_text"
+                        style="@style/row_item_text_right"
+                        android:gravity="top|right"
+                        android:lines="3"
+                        android:paddingTop="@dimen/dp_5"
+                        android:text="@{visitor.reason}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/status_complete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/row_item_text_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/visit_really_time" />
+
+                    <TextView
+                        android:id="@+id/visit_really_time_text"
+                        style="@style/row_item_text_right"
+                        android:text="@{visitor.realTime}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/row_item_text_left"
+                        android:layout_weight="1.2"
+                        android:text="@string/visit_verify_code" />
+
+                    <TextView
+                        android:id="@+id/visit_verify_code"
+                        style="@style/row_item_text_right"
+                        android:text="######" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/row_item_text_left"
+                        android:text="@string/visit_out_time" />
+
+                    <TextView
+                        android:id="@+id/visit_out_time_text"
+                        style="@style/row_item_text_right"
+                        android:text="@{visitor.leaveTime}" />
+                </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/row_item_text_left"
+                            android:text="@string/scan_in" />
+
+                        <TextView
+                            style="@style/row_item_text_right"
+                            android:text="@{visitor.scanCodeEnterTime}" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                    android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/row_item_text_left"
+                            android:text="@string/scan_out" />
+
+                        <TextView
+                            style="@style/row_item_text_right"
+                            android:text="@{visitor.scanCodeLeaveTime}" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/status_scan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/verify_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/verify_code_btn_bg"
+                            android:text="@string/verify_code"
+                            android:textColor="@color/orange_50"
+                            android:textSize="@dimen/sp_16" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/verify_code_ed"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_36"
+                        android:layout_marginRight="@dimen/dp_20"
+                        android:layout_weight="3"
+                        android:background="@drawable/btn_rectangle_shape_education"
+                        android:hint="@string/verify_code_hint"
+                        android:paddingLeft="@dimen/dp_10"
+                        android:textSize="@dimen/sp_16" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:background="@color/gray9" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/scan_in"
+                        android:textSize="@dimen/sp_16" />
+
+                    <TextView
+                        android:id="@+id/scan_in_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_35"
+                        android:layout_weight="2"
+                        android:background="@drawable/btn_rectangle_shape_education"
+                        android:gravity="center"
+                        android:hint="@string/scan_hint"
+                        android:paddingLeft="@dimen/dp_10"
+                        android:text="@{visitor.scanCodeEnterTime}"
+                        android:textSize="@dimen/sp_16" />
+
+                    <ImageView
+                        android:id="@+id/scan_in"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dp_10"
+                        android:src="@mipmap/scan" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:background="@color/gray9" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/scan_out"
+                        android:textSize="@dimen/sp_16" />
+                    <TextView
+                        android:id="@+id/scan_out_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_35"
+                        android:layout_weight="2"
+                        android:background="@drawable/btn_rectangle_shape_education"
+                        android:gravity="center"
+                        android:hint="@string/scan_hint"
+                        android:paddingLeft="@dimen/dp_10"
+                        android:textSize="@dimen/sp_16" />
+
+                    <ImageView
+                        android:id="@+id/scan_out"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dp_10"
+                        android:src="@mipmap/scan" />
+                </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</layout>

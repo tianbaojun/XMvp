@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="@dimen/dp_0"
+    android:background="@color/schedule_griditems_bg">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:background="@drawable/schedule_bg_gv"
+        android:padding="@dimen/dp_12">
+
+        <ImageView
+            android:id="@+id/adapter_home_more_item_text"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_48"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/dp_5"
+            android:gravity="center" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

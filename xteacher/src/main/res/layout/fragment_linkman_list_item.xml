@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/link_main_child_ofly"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_60"
+    android:paddingRight="@dimen/dp_15"
+    android:paddingLeft="@dimen/dp_15">
+
+    <com.zjhz.teacher.ui.view.CircleImageView
+        android:id="@+id/fragment_linkman_list_item_imageview"
+        android:layout_width="@dimen/linkman_fragment_height"
+        android:layout_height="@dimen/linkman_fragment_height"
+        android:contentDescription="@null"
+        android:layout_centerVertical="true"
+        app:border_color="@color/transparent"
+        app:border_width="@dimen/dp_0" />
+
+    <TextView
+        android:id="@+id/fragment_linkman_list_item_textTitle"
+        android:layout_toRightOf="@+id/fragment_linkman_list_item_imageview"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:textSize="@dimen/sp15"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageView
+        android:id="@+id/link_main_child_phone"
+        android:layout_toLeftOf="@+id/link_main_child_notify"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/phone"/>
+
+    <ImageView
+        android:id="@+id/link_main_child_notify"
+        android:layout_toLeftOf="@+id/link_main_child_message"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/notify"/>
+
+    <ImageView
+        android:id="@+id/link_main_child_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/message"/>
+
+</RelativeLayout>

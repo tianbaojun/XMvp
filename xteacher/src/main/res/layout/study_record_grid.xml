@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="record_subject"
+            type="com.zjhz.teacher.bean.GrowthStudyRecord.ListBean"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/growth_subject_bg"
+        android:layout_margin="@dimen/dp_10">
+        <TextView
+            android:id="@+id/subject_score"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:text="@{String.valueOf(record_subject.score)}"
+            android:layout_margin="@dimen/dp_1"
+            android:textColor="@color/gray3"
+            android:textStyle="bold"
+            android:textSize="@dimen/sp20"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/subject_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_20"
+            android:text="@{record_subject.subjectName}"
+            android:textSize="@dimen/sp16"
+            android:background="@color/white"
+            android:textColor="@color/white"
+            android:gravity="center"/>
+
+    </LinearLayout>
+</layout>

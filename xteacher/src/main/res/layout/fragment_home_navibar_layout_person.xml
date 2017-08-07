@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal"
+    android:background="@color/text_colorf7"
+    android:layout_width="fill_parent"
+    android:layout_marginTop="@dimen/dp_10"
+    android:layout_height="@dimen/dp_35"
+    android:id="@+id/fragment_home_person"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0.5"
+        android:background="@color/text_colord2"/>
+
+    <TextView
+        android:id="@+id/navibar_person_title_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:background="@mipmap/home_person_one"
+        android:layout_centerVertical="true" />
+
+    <LinearLayout
+        android:id="@+id/navibar_person_content_more"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp_15"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/navibar_more"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/main_gray"  />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/arrow_right"
+            android:paddingLeft="@dimen/dp_5"
+            android:layout_marginLeft="@dimen/dp_2"/>
+    </LinearLayout  >
+    <View
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="@dimen/dp_0.5"
+        android:background="@color/text_colord2"/>
+</RelativeLayout>

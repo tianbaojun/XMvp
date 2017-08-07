@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/img_iv"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/adapter_news_none"
+            android:scaleType="centerCrop"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_75" />
+        <RelativeLayout
+            android:paddingTop="@dimen/dp_5"
+            android:paddingRight="@dimen/dp_5"
+            android:layout_toLeftOf="@id/img_iv"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_75">
+            <TextView
+                android:id="@+id/title_tv"
+                android:layout_alignParentTop="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/dp_3"
+                android:textColor="@color/text_color28"
+                android:textSize="@dimen/sp_16"
+                />
+            <TextView
+                android:id="@+id/content_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color65"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_14"
+                android:layout_alignParentBottom="true"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

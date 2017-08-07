@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".ui.activity.LeaveApplyForContentActivity">
+
+    <include layout="@layout/title_tetx"/>
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                style="@style/fly_ll_leave"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/text_16sp_color28"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_weight="2.8"
+                    android:textColor="@color/text_color32"
+                    android:text="@string/leave_start_time" />
+                <TextView
+                    android:id="@+id/activity_leave_apply_for_start_time"
+                    style="@style/text_16sp_color28"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="left"
+                    android:hint="@string/please_select_start_time_leave_apply"
+                    android:textColor="@color/text_color82"/>
+                <ImageView
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    android:src="@mipmap/work_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/fly_ll_leave"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/text_16sp_color28"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_weight="2.8"
+                    android:textColor="@color/text_color32"
+                    android:text="@string/deadline_for_leave" />
+                <TextView
+                    android:id="@+id/activity_leave_apply_for_end_time"
+                    style="@style/text_16sp_color28"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="left"
+                    android:hint="@string/please_select_deadline"
+                    android:textColor="@color/text_color82"/>
+                <ImageView
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    android:src="@mipmap/work_arrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/fly_ll_leave"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/text_16sp_color28"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_weight="2.5"
+                    android:textColor="@color/text_color32"
+                    android:text="@string/leave_type" />
+                <TextView
+                    android:id="@+id/activity_leave_apply_for_type"
+                    style="@style/text_16sp_color28"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:hint=""
+                    android:textColor="@color/text_color82"/>
+                <RelativeLayout
+                    android:id="@+id/activity_leave_apply_for_image"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/leave_down" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!--请假理由-->
+            <LinearLayout
+                style="@style/fly_ll_leave"
+                android:orientation="horizontal"
+                android:layout_height="@dimen/dp_80">
+
+                <TextView
+                    style="@style/text_16sp_color28"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_weight="2"
+                    android:layout_gravity="top"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:textColor="@color/text_color32"
+                    android:text="@string/reason_for_leave" />
+                <EditText
+                    android:id="@+id/activity_leave_apply_for_reason"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:paddingTop="@dimen/dp_15"
+                    android:background="@null"
+                    android:layout_weight="3"
+                    android:gravity="left|top"
+                    android:maxLength="50"
+                    android:hint="@string/reason"
+                    android:textColor="@color/text_color32"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:orientation="vertical"
+                android:id="@+id/kcap_layout"
+                android:visibility="gone">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/background"/>
+                <TextView
+                    android:id="@+id/kcap"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:paddingLeft="@dimen/dp_12"
+                    android:drawableLeft="@mipmap/leave_course_arrangement"
+                    android:drawablePadding="@dimen/dp_15"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/course_arrangement"
+                    android:visibility="visible" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/background"/>
+
+                <com.zjhz.teacher.ui.view.ScrollAnimatedExpandableListView
+                    android:id="@+id/activity_leave_apply_for_listView"
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

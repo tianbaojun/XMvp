@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.zjhz.teacher.ui.activity.PersonMoralEducationContentActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/title_bar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/text_colore5"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/activity_person_moral_education_editor_time"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/yuanjiao"
+                android:gravity="center"
+                android:text="@string/check_time"
+                android:textColor="@color/text_color28"
+                android:textSize="@dimen/sp14" />
+
+            <TextView
+                android:id="@+id/activity_person_moral_education_editor_project"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/yuanjiao"
+                android:gravity="center"
+                android:text="@string/check_the_red_scarf"
+                android:textColor="@color/text_color28"
+                android:textSize="@dimen/sp14" />
+
+            <TextView
+                android:id="@+id/activity_person_moral_education_editor_ed"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/yuanjiao"
+                android:gravity="center"
+                android:textColor="@color/text_color28"
+                android:textSize="@dimen/sp14" />
+
+            <TextView
+                android:id="@+id/activity_person_moral_education_editor_clazz"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginBottom="@dimen/dp_15"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/yuanjiao"
+                android:gravity="center"
+                android:text="@string/please_select_grade_or_class"
+                android:textColor="@color/text_color28" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/activity_person_moral_education_editor_head"
+            android:layout_width="@dimen/dp_150"
+            android:layout_height="@dimen/dp_210"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_50"
+            android:scaleType="fitXY"
+            android:src="@mipmap/header" />
+
+        <TextView
+            android:id="@+id/activity_person_moral_education_editor_value_interval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_5"
+            android:text="分值区间："
+            android:textColor="@color/text_color28" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/activity_person_moral_education_editor_score"
+                android:text="@string/Score"
+                android:textColor="@color/text_color28" />
+
+            <EditText
+                android:id="@+id/activity_person_moral_education_editor_score"
+                android:layout_width="@dimen/dp_150"
+                android:layout_height="@dimen/dp_40"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/yuanjiao"
+                android:gravity="center"
+                android:hint="@string/please_enter_student_credit"
+                android:textColorHint="@color/text_colord2"
+                android:inputType="text"
+                android:paddingRight="@dimen/dp_15"
+                android:textColor="@color/text_color28"
+                android:textSize="@dimen/sp14" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/activity_person_moral_education_editor_submit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_60"
+            android:background="@drawable/yuanjiao_green"
+            android:gravity="center"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_15"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_30">
+
+            <TextView
+                android:id="@+id/activity_person_moral_education_editor_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_colord2"
+                android:textSize="@dimen/sp13" />
+
+            <TextView
+                android:id="@+id/activity_person_moral_education_editor_time_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/text_colord2"
+                android:textSize="@dimen/sp13" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

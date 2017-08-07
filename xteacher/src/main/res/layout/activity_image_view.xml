@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl"
+    >
+    <include
+        android:id="@+id/title_in"
+        layout="@layout/title_bar"/>
+    <RelativeLayout
+        android:id="@+id/headview"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical">
+        <Button
+            android:textSize="14sp"
+            android:textColor="#fff"
+            android:id="@+id/gallery_del"
+            android:background="@drawable/plugin_camera_del_state"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+
+
+    <com.zjhz.teacher.utils.uk.co.senab.photoview.ViewPagerFixed
+        android:id="@+id/gallery01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headview"
+        android:layout_centerHorizontal="true"
+        android:unselectedAlpha="1">
+    </com.zjhz.teacher.utils.uk.co.senab.photoview.ViewPagerFixed>
+
+
+    <com.zjhz.teacher.utils.uk.co.senab.photoview.HackyViewPager
+        android:id="@+id/pager"
+        android:layout_below="@id/headview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_centerHorizontal="true"
+        android:unselectedAlpha="1">
+    </com.zjhz.teacher.utils.uk.co.senab.photoview.HackyViewPager>
+
+
+</RelativeLayout>

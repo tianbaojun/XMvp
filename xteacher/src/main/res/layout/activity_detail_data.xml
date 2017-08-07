@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e5e5e5"
+    tools:context="com.zjhz.teacher.ui.activity.DetailDataActivity">
+
+    <include
+        android:id="@+id/activity_detail_data_zero"
+        layout="@layout/title_bar"/>
+
+    <RelativeLayout
+        android:id="@+id/activity_detail_data_one"
+        android:layout_below="@+id/activity_detail_data_zero"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_90"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/dp_15"
+        android:paddingLeft="@dimen/dp_15"
+        android:background="@color/white">
+
+        <com.zjhz.teacher.ui.view.CircleImageView
+            android:id="@+id/user_head_detail"
+            android:layout_width="@dimen/dp_65"
+            android:layout_height="@dimen/dp_65"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/header"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/dp_15"  />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@+id/user_head_detail"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/activity_detail_data_name"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:text=""
+                android:textSize="@dimen/sp14" />
+            <TextView
+                android:id="@+id/activity_detail_data_type"
+                android:layout_below="@+id/activity_detail_data_name"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:text=""
+                android:textSize="@dimen/sp14"
+                android:textColor="@color/gray"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/name_rl_two"
+        android:layout_below="@+id/activity_detail_data_one"
+        android:layout_marginTop="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_15"
+        android:paddingLeft="@dimen/dp_15"
+        style="@style/me_rl"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.5"
+            android:layout_alignParentBottom="true"
+            android:background="#e5e5e5"/>
+        <TextView
+            android:id="@+id/activity_detail_data_student_name"
+            android:text="学生姓名"
+            style="@style/me_text"/>
+
+        <TextView
+            android:id="@+id/activity_detail_data_student_name_tv"
+            android:text=""
+            android:layout_marginLeft="@dimen/dp_15"
+            style="@style/right_text"
+            android:layout_toRightOf="@+id/activity_detail_data_student_name"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/name_rl_three"
+        android:layout_below="@+id/name_rl_two"
+        android:paddingRight="@dimen/dp_15"
+        android:paddingLeft="@dimen/dp_15"
+        style="@style/me_rl"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.5"
+            android:layout_alignParentBottom="true"
+            android:background="#e5e5e5"/>
+        <TextView
+            android:id="@+id/activity_detail_data_student_number"
+            android:text="学生学号"
+            style="@style/me_text"/>
+
+        <TextView
+            android:id="@+id/activity_detail_data_student_number_tv"
+            android:text=""
+            android:layout_marginLeft="@dimen/dp_15"
+            style="@style/right_text"
+            android:layout_toRightOf="@+id/activity_detail_data_student_number"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/name_rl_four"
+        android:layout_below="@+id/name_rl_three"
+        android:paddingRight="@dimen/dp_15"
+        android:paddingLeft="@dimen/dp_15"
+        style="@style/me_rl">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.5"
+            android:layout_alignParentBottom="true"
+            android:background="#e5e5e5"/>
+        <TextView
+            android:id="@+id/activity_detail_data_student_m"
+            android:text="亲属关系"
+            style="@style/me_text"/>
+
+        <TextView
+            android:id="@+id/activity_detail_data_student_mtv"
+            android:text=""
+            android:layout_marginLeft="@dimen/dp_15"
+            style="@style/right_text"
+            android:layout_toRightOf="@+id/activity_detail_data_student_m"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/name_rl_five"
+        android:layout_below="@+id/name_rl_four"
+        android:paddingRight="@dimen/dp_15"
+        android:paddingLeft="@dimen/dp_15"
+        style="@style/me_rl"
+        >
+        <TextView
+            android:id="@+id/activity_detail_data_student_phone"
+            android:text="联系电话"
+            style="@style/me_text"/>
+
+        <TextView
+            android:id="@+id/activity_detail_data_student_phone_tv"
+            android:text=""
+            android:layout_marginLeft="@dimen/dp_15"
+            style="@style/right_text"
+            android:layout_toRightOf="@+id/activity_detail_data_student_phone"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="60dp">
+
+        <View
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/activity_detail_data_student_phone_btn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="拨号"
+            android:drawableLeft="@mipmap/phone"
+            android:layout_height="match_parent" />
+        <View
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/activity_detail_data_student_notify_btn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:drawableLeft="@mipmap/notify"
+            android:text="发通知"
+            android:layout_height="match_parent" />
+        <View
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/activity_detail_data_student_message_btn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:drawableLeft="@mipmap/message"
+            android:text="发消息"
+            android:layout_height="match_parent" />
+
+        <View
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</RelativeLayout>

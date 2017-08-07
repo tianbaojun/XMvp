@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_personal_calendar_month_day_back"
+    android:orientation="vertical"
+    tools:context=".ui.activity.MyScheduleQueryActivity">
+    <include layout="@layout/title_bar" />
+    <EditText
+        android:id="@+id/activity_my_schedule_query_ed"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/yuanjiao"
+        android:layout_gravity="center"
+        android:textSize="@dimen/sp14"
+        android:drawableLeft="@mipmap/extramural_search"
+        android:drawablePadding="@dimen/dp_8"
+        android:hint="@string/hunt_for" />
+
+    <com.zjhz.teacher.ui.view.PullToRefreshView
+        android:id="@+id/activity_my_schedule_query_pull_refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/activity_my_schedule_query_pull_refresh_view">
+
+        <ListView
+            android:id="@+id/activity_my_schedule_query_list_view"
+            android:listSelector="@color/lightest_gray"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.zjhz.teacher.ui.view.PullToRefreshView>
+
+</LinearLayout>

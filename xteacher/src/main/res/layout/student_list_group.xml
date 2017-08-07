@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="isExpandGroupOpen"
+            type="Boolean"/>
+        <variable
+            name="classesBeans"
+            type="com.zjhz.teacher.NetworkRequests.response.ClassesBeans"/>
+    </data>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_45"
+    android:background="@color/white"
+    android:gravity="center_vertical">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/grow_group_icon"
+        android:layout_marginLeft="@dimen/dp_20"/>
+    <TextView
+        android:id="@+id/class_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{classesBeans.name}"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:textColor="@color/gray4"
+        android:textSize="@dimen/sp_14"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{classesBeans.studentNumString}"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:textColor="@color/gray4"
+        android:textSize="@dimen/sp_14"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    <ImageView
+        android:id="@+id/class_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@{isExpandGroupOpen ? @drawable/arrow_down : @drawable/arrow_right}"
+        android:layout_marginRight="@dimen/dp_20"/>
+</LinearLayout>
+</layout>

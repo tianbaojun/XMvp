@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="end"
+    android:background="@color/white"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scroll_view"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="课程类别"
+                android:textColor="@color/gray3"
+                android:textSize="@dimen/sp13" />
+
+            <com.zjhz.teacher.ui.view.ScrollViewWithGridView
+                android:id="@+id/subject_type_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:horizontalSpacing="@dimen/dp_5"
+                android:numColumns="3"
+                android:verticalSpacing="@dimen/dp_5" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0.5"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@color/gray_d" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="课程属性"
+                android:textColor="@color/gray3"
+                android:textSize="@dimen/sp13" />
+
+            <com.zjhz.teacher.ui.view.ScrollViewWithGridView
+                android:id="@+id/subject_prop_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_10"
+                android:verticalSpacing="@dimen/dp_5"
+                android:numColumns="3" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0.5"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@color/gray_d" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginTop="@dimen/dp_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="科目"
+                    android:textColor="@color/gray3"
+                    android:textSize="@dimen/sp13" />
+
+                <EditText
+                    android:id="@+id/subject_name_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_28"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:background="@drawable/btn_rectangle_radio_gray_background"
+                    android:gravity="center_vertical"
+                    android:hint="请输入课程名称"
+                    android:paddingLeft="@dimen/dp_20"
+                    android:textSize="@dimen/sp12" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0.5"
+                android:background="@color/gray_d" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginTop="@dimen/dp_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="课程编号"
+                    android:textColor="@color/gray3"
+                    android:textSize="@dimen/sp13" />
+
+                <EditText
+                    android:id="@+id/subject_num_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_28"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:background="@drawable/btn_rectangle_radio_gray_background"
+                    android:gravity="center_vertical"
+                    android:hint="AQ1124"
+                    android:paddingLeft="@dimen/dp_20"
+                    android:textSize="@dimen/sp12" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0.5"
+                android:background="@color/gray_d" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginTop="@dimen/dp_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="任课教师"
+                    android:textColor="@color/gray3"
+                    android:textSize="@dimen/sp13" />
+
+                <EditText
+                    android:id="@+id/teacher_name_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_28"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:background="@drawable/btn_rectangle_radio_gray_background"
+                    android:gravity="center_vertical"
+                    android:hint="请输入任课教师姓名"
+                    android:paddingLeft="@dimen/dp_20"
+                    android:textSize="@dimen/sp12" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0.5"
+                android:background="@color/gray_d" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginTop="@dimen/dp_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="辅助教师"
+                    android:textColor="@color/gray3"
+                    android:textSize="@dimen/sp13" />
+
+                <EditText
+                    android:id="@+id/assistant_name_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_28"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:background="@drawable/btn_rectangle_radio_gray_background"
+                    android:gravity="center_vertical"
+                    android:hint="请输入辅助教师姓名"
+                    android:paddingLeft="@dimen/dp_20"
+                    android:textSize="@dimen/sp12" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0.5"
+                android:background="@color/gray_d" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginTop="@dimen/dp_10"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="班级"
+                    android:textColor="@color/gray3"
+                    android:textSize="@dimen/sp13" />
+
+                <TextView
+                    android:id="@+id/grade_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_28"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:background="@drawable/btn_rectangle_radio_gray_background"
+                    android:gravity="center_vertical"
+                    android:hint="请选择班级"
+                    android:paddingLeft="@dimen/dp_20"
+                    android:textSize="@dimen/sp12"
+                    android:inputType="none"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0.5"
+                android:background="@color/gray_d" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@id/bottom_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_rectangle_shape_education_top_bottom">
+
+        <TextView
+            android:id="@+id/cancel_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_10"
+            android:text="清除筛选"
+            android:textColor="@color/gray6"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/submit_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/title_background_red"
+            android:gravity="center"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp14" />
+    </LinearLayout>
+
+</RelativeLayout>

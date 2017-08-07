@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/XMvp.iml" filepath="$PROJECT_DIR$/XMvp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/smart-loading-layout/smart-loading-layout.iml" filepath="$PROJECT_DIR$/smart-loading-layout/smart-loading-layout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tinker/tinker.iml" filepath="$PROJECT_DIR$/tinker/tinker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xteacher/xteacher.iml" filepath="$PROJECT_DIR$/xteacher/xteacher.iml" />
+    </modules>
+  </component>
+</project>

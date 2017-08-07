@@ -1,0 +1,470 @@
+<resources>
+    <item name="list_item_type" type="id" />
+    <string name="app_name">千校云</string>
+
+    <string name="module_cookbook">今日食谱</string>
+
+    <string name="home">首页</string>
+    <string name="message">消息</string>
+    <string name="exchange">交流</string>
+    <string name="mine">我</string>
+
+    <string name="state_network_error">网络错误</string>
+    <string name="state_loading">正在加载…</string>
+    <string name="state_not_more">没有更多数据</string>
+    <string name="state_load_error">加载失败</string>
+    <string name="state_refreshing">正在刷新</string>
+
+    <string name="copy_success">复制成功</string>
+
+    <string name="gallery_save_file_not_have_external_storage">没有外部存储!</string>
+    <string name="gallery_save_file_success">保存成功!</string>
+    <string name="gallery_save_file_failed">存储失败!</string>
+    <string name="image_select_opt_done">完成</string>
+    <string name="image_select_opt_preview">预览</string>
+
+    <!-- Error View -->
+    <string name="error_view_click_to_refresh">点击屏幕,重新加载</string>
+    <string name="error_view_no_data">暂无内容</string>
+    <string name="error_view_loading">加载中…</string>
+    <string name="error_view_load_error_click_to_refresh">内容加载失败\r\n点击重新加载</string>
+    <string name="error_view_network_error_click_to_refresh">没有可用的网络</string>
+    <string name="tip_network_error">没有可用的网络</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- 登录界面  start  -->
+    <string name="username_hint">输入账号或手机号</string>
+    <string name="password_hint">输入密码</string>
+    <!--<string name="login">登&#160;&#160;&#160;&#160;录</string>-->
+    <string name="login_status_success">登录成功。</string>
+    <string name="login_status_null_username_or_password">帐号和密码不能为空。</string>
+    <string name="progress_login">正在登录…</string>
+    <string name="remember_pass">记住密码</string>
+    <string name="forget_password">忘记密码</string>
+    <string name="auto_login">自动登录</string>
+    <string name="choose_school">选择学校</string>
+    <string name="tip_no_internet">当前没有可用的网络</string>
+    <string name="loading">加载中…</string>
+
+    <string name="navibar_more">更多</string>
+    <string name="main_home_exit">再按一次退出程序</string>
+
+    <string name="pickerview_cancel">取消</string>
+    <string name="pickerview_submit">确定</string>
+    <string name="pickerview_year">年</string>
+    <string name="pickerview_month">月</string>
+    <string name="pickerview_day">日</string>
+    <string name="pickerview_hours">时</string>
+    <string name="pickerview_minutes">分</string>
+    <string name="pickerview_seconds">秒</string>
+
+    <!--作业管理-->
+    <string name="work_manager">作业查看</string>
+    <string name="work_preview">作业预览</string>
+    <string name="work_manager_class">班级：</string>
+    <string name="work_manager_one">班级</string>
+    <string name="work_manager_two">科目</string>
+    <string name="work_manager_three">教师</string>
+    <string name="work_manager_four">时间</string>
+
+    <!--校历管理-->
+    <string name="school_calendar_manager">校历查看</string>
+    <string name="school_calendar_manager_week">周</string>
+
+    <!--个人行事历-->
+    <string name="personal_calendar">个人行事历</string>
+
+    <!--网络请求-->
+    <string name="net_request_data">请求数据：</string>
+
+    <string name="show_all">全文 &gt;</string>
+    <string name="close_show_all">收起 &lt; </string>
+
+    <string name="version">版本</string>
+    <string name="company_name">杭州智鹏教育科技股份有限公司\n tel:0571-86689966</string>
+    <string name="receiving_object">接收对象：</string>
+    <string name="please_select_the_receiving_object">请选择接收对象</string>
+    <string name="conference_theme">内容：</string>
+    <string name="please_enter_a_conference_theme">请输入会议主题</string>
+    <string name="conference_content">会议内容：</string>
+    <string name="please_enter_the_conference_content">请输入会议内容</string>
+    <string name="whether_you_need_a_receipt">是否需要回执</string>
+    <string name="preservation">保存</string>
+    <string name="release">发布</string>
+    <string name="subject">科目:</string>
+    <string name="please_select_subjects">请选择科目</string>
+    <string name="grade">班级：　</string>
+    <string name="job_length">作业时长：</string>
+    <string name="please_enter_a_long_time">请输入时长</string>
+    <string name="minute">分钟</string>
+    <string name="time_of_delivery">上交时间：</string>
+    <string name="please_select_the_time">请选择时间</string>
+    <string name="content">内容:</string>
+    <string name="remark">备注:</string>
+    <string name="please_enter_the_content">请输入内容</string>
+    <string name="type">类型:</string>
+    <string name="please_select_the_type_of_meal">请选择类型</string>
+    <string name="breakfast">早餐</string>
+    <string name="immediate_experience">立即体验</string>
+    <string name="album_initialization">相册初始化中..</string>
+    <string name="individual_moral_education">个人德育</string>
+    <string name="inspection_date">检查日期:</string>
+    <string name="please_enter_student_number_or_card_number">请输入学生号或卡号</string>
+    <string name="section">节次</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="monday">一</string>
+    <string name="tuesday">二</string>
+    <string name="wednesday">三</string>
+    <string name="thursday">四</string>
+    <string name="friday">五</string>
+    <string name="hunt_for">搜索</string>
+    <string name="pet_name">昵称</string>
+    <string name="name">姓名</string>
+    <string name="sex">性别</string>
+    <string name="boy">男</string>
+    <string name="girl">女</string>
+    <string name="accounts">帐号</string>
+    <string name="phone_number">手机号</string>
+    <string name="school">学校</string>
+    <string name="department">部门</string>
+    <string name="the_number_of_staff">教工号</string>
+    <string name="campus_news">校园新闻</string>
+    <string name="title">标题</string>
+    <string name="add_comments_no_more_than_200_words">添加评论（不超过200字）</string>
+    <string name="say_your_opinion">说出你的意见吧</string>
+    <string name="submit">提交</string>
+    <string name="reasons_to_go_out_the_content_of_up_to_80_characters">请输入外出理由</string>
+    <string name="please_enter_calendar_content">请输入行事历内容</string>
+    <string name="send_out">确认</string>
+    <string name="select_the_contact">选择联系人</string>
+    <string name="item_name">物品名称:</string>
+    <string name="please_enter_the_name_of_the_item">请输入物品名称</string>
+    <string name="repair_site">报修地点:</string>
+    <string name="please_enter_the_repair_site">请输入报修地点</string>
+    <string name="repair_department">修理部门:</string>
+    <string name="please_select_repair_department">请选择修理部门</string>
+    <string name="situation_description">情况描述:</string>
+    <string name="please_briefly_describe_the_situation_of_things">请简单描述物品情况</string>
+    <string name="repair_application">报修申请</string>
+    <string name="repair_finish">已完成</string>
+    <string name="repair_reback">退回</string>
+    <string name="select_from_the_album">从相册选择</string>
+    <string name="photograph">拍照</string>
+    <string name="please_enter_the_old_password">请输入旧密码</string>
+    <string name="please_enter_a_new_password">请输入新密码</string>
+    <string name="enter_new_password_again">再次输入新密码</string>
+    <string name="teacher">教师:</string>
+    <string name="job_name">作业名称：</string>
+    <string name="release_time">发布时间：</string>
+    <string name="job_content">作业内容：</string>
+    <string name="management_department">管理部</string>
+    <string name="already_applied">已申请</string>
+    <string name="send_object">发送对象:</string>
+    <string name="call">呼叫</string>
+    <string name="high_priority">高优先级</string>
+    <string name="middle_priority">中优先级</string>
+    <string name="low_priority">低优先级</string>
+    <string name="no_priority">无优先级</string>
+    <string name="select_date">选择日期</string>
+    <string name="please_select_start_time">请选择起始时间</string>
+    <string name="please_select_deadline">请选择截止时间</string>
+    <string name="clear_options">清除选项</string>
+    <string name="userName">用户名</string>
+    <string name="loading_more">正在加载更多..</string>
+
+    <string name="contact">联系人</string>
+    <string name="personal_data_center">个人资料中心</string>
+    <string name="mine_pay">个人支付</string>
+    <string name="feedback">意见反馈</string>
+    <string name="online_service">在线客服</string>
+    <string name="about">关于</string>
+    <string name="modify_password">修改密码</string>
+    <string name="exit_login">退出登录</string>
+    <string name="confirm_exiting_current_account">确认退出当前账户？</string>
+    <string name="leadership_of_week">值周领导:</string>
+    <string name="load_more">加载更多</string>
+    <string name="pull_up_load_more">上拉加载更多</string>
+    <string name="pull_down_refresh">下拉刷新</string>
+    <string name="boutique_application_recommended_download">精品应用推荐下载</string>
+    <string name="drafts">草稿箱</string>
+    <string name="screen">筛选　</string>
+    <string name="cut_off">删除　</string>
+    <string name="guarantee_department">报修部门:</string>
+    <string name="to_examine">审核</string>
+    <string name="retreat">退回</string>
+    <string name="disagree">不同意</string>
+    <string name="agree_two">同意</string>
+    <string name="course_arrangement">课程安排</string>
+    <string name="reason_for_leave">请假理由：</string>
+    <string name="time_off">请假时间：</string>
+    <string name="leave_type">请假类型：</string>
+    <!--报修申请-->
+    <string name="repairs_title">报修申请</string>
+    <string name="repairs_detail_title">报修详情</string>
+    <string name="title_activity_person_moral_education_detail">PersonMoralEducationDetailActivity
+    </string>
+
+    <string name="about_us">关于我们</string>
+    <string name="head_portrait">头像</string>
+    <string name="test">测试</string>
+    <string name="my_school">我的学校</string>
+
+    <string name="please_enter_history_time">请选择历史时间</string>
+    <string name="please_choose_grades_and_classes">请选择年级/班级</string>
+    <string name="please_enter_the_student_number_and_name">请输入学生学号或姓名</string>
+    <string name="student_name">学生姓名</string>
+    <string name="record_time">记录时间</string>
+    <string name="place">地点</string>
+    <string name="entry_and_exit">出入校</string>
+    <string name="choose_student">选择学生</string>
+    <string name="selected_school_teachers">选发校内教师</string>
+    <string name="the_parents_of_the_students">选发学生家长</string>
+    <string name="please_enter_a_title">请输入标题</string>
+    <string name="meeting_time">会议时间:</string>
+    <string name="informations_in_BBS">站内信息</string>
+    <string name="Jpush">APP推送</string>
+    <string name="short_message">短信</string>
+    <string name="select_all">全选</string>
+    <string name="can_enter_up_to_25_characters">最多可输入25个字符</string>
+    <string name="treatment_opinion">处理意见:</string>
+    <string name="Apply">申请</string>
+    <string name="examination_and_approval">审批</string>
+    <string name="Agree_with_the_Hezhuo_campus_user_privacy_agreement">同意 《智鹏千校云用户隐私协议》</string>
+    <string name="reason">理由</string>
+    <string name="Compassionate_leave">事假</string>
+    <string name="leave_start_time">请假起始时间：</string>
+    <string name="please_select_start_time_leave_apply">请选择开始时间</string>
+    <string name="deadline_for_leave">请假截止时间：</string>
+    <string name="total_hour_for_leave">请假总小时数：</string>
+    <string name="application_for_leave">请假申请</string>
+    <string name="check_the_red_scarf">红领巾检查</string>
+    <string name="please_enter_the_student_number_or_name">请输入学生学号/姓名</string>
+    <string name="please_select_grade_or_class">请选择年级/班级</string>
+    <string name="repair_time">报修时间:</string>
+    <string name="view_more_views">查看更多意见</string>
+    <string name="starting_Point">起点</string>
+    <string name="all_departments">所有部门</string>
+    <string name="system_">【系统】</string>
+    <string name="current_password">当前密码</string>
+    <string name="new_password">新密码</string>
+    <string name="sure_new_password">确认新密码</string>
+    <string name="confirm_submission">确认提交</string>
+    <string name="see_more_comments">查看更多评论</string>
+    <string name="data_not_found">暂无数据</string>
+    <string name="please_choose_effcitive_grades_and_classes">请选择有效的年级班级</string>
+    <string name="view_details">查看详情</string>
+    <string name="can_enter_up_to_25_words">最多可输入25字</string>
+    <string name="System_message">系统消息</string>
+    <string name="school_message">学校消息</string>
+    <string name="dangerous">危险区域报警</string>
+    <string name="current_location">当前位置</string>
+    <string name="go_to_school_route">上学路线</string>
+    <string name="leave_school_route">放学路线</string>
+    <string name="historical_route">历史路线</string>
+    <string name="add_to">添加</string>
+    <string name="screen_short">筛选</string>
+    <string name="to_be_a_substitute_teacher">代课</string>
+    <string name="my_apply">我的申请</string>
+    <string name="pending_endorsement">待审批单 </string>
+    <string name="conference_title">会议标题:</string>
+
+
+    <string name="program_name_special_inspection">方案名称：专项检查</string>
+    <string name="check_object">检查对象</string>
+    <string name="check_time">检查时间</string>
+    <string name="one_grade">一年级</string>
+    <string name="special_inspection">专项检查</string>
+    <string name="please_enter_the_student_number">请输入学生学号 </string>
+    <string name="Score">得分:</string>
+    <string name="please_enter_student_credit">请输入学生扣分</string>
+    <string name="mEdit">编辑</string>
+    <string name="no_cut_off">删除</string>
+    <string name="please_choose_the_moral_education_project">请选择德育项目</string>
+
+    <!-- 班级成绩列表-->
+    <string name="teacher_name">教师姓名</string>
+    <string name="type_no">类型</string>
+    <string name="photo">照片</string>
+    <string name="numbers">分数</string>
+    <string name="No">学号</string>
+
+    <string name="school_year">学年</string>
+    <string name="Semester">学期</string>
+    <string name="grade_type">成绩类型</string>
+    <string name="date">日期</string>
+
+    <string name="teacher_voice">教师留言：</string>
+    <string name="homework_press_voilce">长按录入语音作业</string>
+    <string name="homework_press_voilce18s">18s\"</string>
+    <string name="repair_state">修理状态</string>
+    <string name="sys_version">智鹏千校云 版本所有 © %1$s </string>
+
+    <string name="school_news">本校新闻</string>
+    <string name="news_details">新闻详情</string>
+    <string name="no_comment">目前没有评论</string>
+    <string name="all_class">所有年级</string>
+    <string name="this_term">本学期</string>
+
+    <!-- education 德育统计  -->
+    <string name="education_num">序号</string>
+    <string name="education_num_up">序号&#8593;</string>
+    <string name="education_num_down">序号&#8595;</string>
+    <string name="education_grade">班级</string>
+    <string name="education_grade_up">班级&#8593;</string>
+    <string name="education_grade_down">班级&#8595;</string>
+    <string name="education_grade_check">班级检查</string>
+    <string name="education_grade_check_up">班级检查&#8593;</string>
+    <string name="education_grade_check_down">班级检查&#8595;</string>
+    <string name="education_person_check">个人检查</string>
+    <string name="education_person_check_up">个人检查&#8593;</string>
+    <string name="education_person_check_down">个人检查&#8595;</string>
+    <string name="education_total">总计</string>
+    <string name="education_total_up">总计&#8593;</string>
+    <string name="education_total_down">总计&#8595;</string>
+    <string name="term_not_found">暂无学期信息</string>
+    <string name="education_count">德育统计</string>
+    <string name="class_data_not_found">暂无班级</string>
+    <string name="grade_data_not_found">暂无年级</string>
+    <string name="all_grade">所有年级</string>
+    <string name="please_choose_class">请选择年级</string>
+    <string name="please_choose_month_term">请选择月份</string>
+    <string name="education_classz">班级德育</string>
+    <string name="education_choose_class">请选班级</string>
+    <string name="education_choose_weeks">请选择周</string>
+    <string name="education_choose_month">请选择月</string>
+    <string name="check">查询</string>
+    <string name="education_choose_date">请选择时间</string>
+    <string name="education_person">个人德育</string>
+    <string name="edu2_total">总分:</string>
+
+    <!--选择会议通知对象SendMessageParentActivity-->
+    <string name="send_message_parent_activity_title_meeting">选择会议对象</string>
+    <string name="send_message_parent_activity_title_mass">选择群发对象</string>
+
+    <!--选择会议通知对象SendMessageTeacherActivity-->
+    <string name="send_message_teacher_activity_title_meeting">选择会议对象</string>
+    <string name="send_message_teacher_activity_title_mass">选择发送对象</string>
+    <!--消息列表适配器  MessageAdapterMsgType-->
+    <string name="message_list_adapter_type_mass_send">群发消息</string>
+    <string name="message_list_adapter_type_dangerous">危险警告</string>
+    <string name="message_list_adapter_type_in_out_schoole">出入校</string>
+    <string name="message_list_adapter_type_metting">会议通知</string>
+    <!--班级圈 ClasszMomentsActivity -->
+    <string name="classz_moments_activity_tab_title_all">全部</string>
+    <string name="classz_moments_activity_tab_title_classz_moments">班级动态</string>
+    <string name="classz_moments_activity_tab_title_document_share">资源共享</string>
+    <string name="classz_moments_activity_tab_title_honour_roll">班级红榜</string>
+    <string name="classz_moments_activity_title">班级圈</string>
+    <string-array name="classz_moments_activity_type">
+        <item>班级动态</item>
+        <item>资源共享</item>
+        <item>班级红榜</item>
+    </string-array>
+    <!--新增班级动态 ClasszMomentsAddShareActivity-->
+    <string name="classz_moments_add_share_hint_input_title">此刻你的想法</string>
+    <string name="classz_moments_add_share_title">班级动态</string>
+    <!--新增资源共享ClasszMomentsAddDocumentActivity-->
+    <string name="classz_moments_add_document_label_textbook">教材版本</string>
+    <string name="classz_moments_add_document_label_type">资源类型</string>
+    <string name="classz_moments_add_document_label_subject">科目</string>
+    <string name="classz_moments_add_document_label_grade">年级</string>
+    <string name="activity_classz_moments_add_document_title">资源共享</string>
+    <string name="activity_classz_moments_add_document_submit">提交</string>
+    <!--电脑导入 activity_classz_moments_upload_file_with_web-->
+    <string name="activity_classz_moments_upload_file_with_web_one">1</string>
+    <string name="activity_classz_moments_upload_file_with_web_please_input_in_web_broswer">请在电脑浏览器中输入：</string>
+    <string name="activity_classz_moments_upload_file_with_web_two">2</string>
+    <string name="activity_classz_moments_upload_file_with_web_please_input_following_number">在电脑页面中输入下方青色数字</string>
+    <string name="activity_classz_moments_upload_file_with_web_refresh_code">刷新</string>
+    <string name="activity_classz_moments_upload_file_with_web_refresh_hint">*如连接码失效，请点击右上角刷新</string>
+    <string name="activity_classz_moments_upload_file_with_web_title">电脑导入</string>
+    <!--添加班级红斑  ClasszMomentsAddHonourRollActivity-->
+    <string name="activity_classz_moments_add_honour_roll_theme">主题：</string>
+    <string name="activity_classz_moments_add_honour_roll_content">正文：</string>
+    <string name="activity_classz_moments_add_honour_roll_title">班级红榜</string>
+    <string name="activity_classz_moments_add_honour_roll_please_input_theme">请输入主题</string>
+    <string name="activity_classz_moments_add_honour_roll_please_input_content">请输入内容</string>
+    <!--班级圈 搜索 ClasszMomentsSearchActivity-->
+    <string name="activity_classz_moments_search_title">搜索</string>
+    <string name="activity_classz_moments_search_search_hint">输入搜索的内容</string>
+    <string name="activity_classz_moments_search_share">班级动态</string>
+    <string name="activity_classz_moments_search_document">学习资源</string>
+    <string name="activity_classz_moments_search_honour">班级红榜</string>
+    <string name="classz_moments_like">赞</string>
+    <string name="classz_moments_comment">评论</string>
+    <string name="classz_moments_type_moments">动态</string>
+    <string name="classz_moments_type_honour">红榜</string>
+    <string name="classz_moments_type_document">资源</string>
+    <string name="classz_moments_add_document_idea">这一刻你的想法</string>
+    <string name="lassz_moments_upload_document_with_web_faild_to_refresh_check_code">刷新失败</string>
+    <string name="classz_moments_submit_success">提交成功</string>
+    <string name="activity_classz_moments_send">发送</string>
+    <string name="classz_moments_cancel_like">取消</string>
+
+
+    <string name="visitor_manager">访客管理</string>
+    <string name="visitor_name">访客姓名</string>
+    <string name="visit_time">拜访时间</string>
+    <string name="visit_state">拜访状态</string>
+    <string name="visit_teacher">拜访老师</string>
+    <string name="visitor_name1">访客姓名:</string>
+    <string name="visitor_phone">访客手机:</string>
+    <string name="visitor_num">同行人数:</string>
+    <string name="visit_time1">预约拜访时间:</string>
+    <string name="visit_company">拜访单位:</string>
+    <string name="visit_reason">拜访事由:</string>
+
+    <string name="visit_really_time">实际拜访时间:</string>
+    <string name="visit_out_time">离校时间:</string>
+    <string name="visit_verify_code">拜访验证码:</string>
+    <string name="visit_really_time_hint">请输入实际时间</string>
+    <string name="visit_out_time_hint">请输入离校时间</string>
+
+    <string name="visitor_name_hint">请输入访客姓名</string>
+    <string name="visitor_phone_hint">请输入访客手机号码</string>
+    <string name="visitor_num_hint">请输入同行人数</string>
+    <string name="visit_time1_hint">请输入预约时间</string>
+    <string name="visit_company_hint">请输入访客单位</string>
+    <string name="visit_reason_hint">请输入访客事由</string>
+    <string name="send_verify_code">发送动态验证码</string>
+    <string name="verify_code">验证码校验</string>
+    <string name="verify_code_hint">请输入验证码</string>
+    <string name="send_code_remarks">注：每次访客活动最多只能发送3次动态验证码，\n且两次发送间隔需大于2分钟</string>
+    <string name="scan_in">发卡入校</string>
+    <string name="scan_out">扫卡离校</string>
+    <string name="scan_hint">扫一扫获取</string>
+    <string name="scan_remarks">将二维码/条码放入框内，即可自动扫描</string>
+    <string name="lunch">中餐</string>
+    <string name="dinner">晚餐</string>
+    <string name="please_input_content">请输入内容</string>
+    <string name="classz">班级</string>
+    <string name="check_pro">检查项目</string>
+    <string name="grade_title">年级</string>
+    <string name="title_activity_pay">PayActivity</string>
+    <string name="education_choose_start_date">开始日期</string>
+    <string name="education_choose_end_date">结束日期</string>
+    <string name="check_plan">检查方案</string>
+
+    <string name="pull_to_refresh">下拉刷新</string>
+    <string name="release_to_refresh">释放立即刷新</string>
+    <string name="refreshing">正在刷新...</string>
+    <string name="refresh_succeed">刷新成功</string>
+    <string name="load_no_more">已加载完所有</string>
+    <string name="refresh_fail">刷新失败</string>
+    <string name="pullup_to_load">上拉加载更多</string>
+    <string name="release_to_load">释放立即加载</string>
+    <string name="load_succeed">加载成功</string>
+    <string name="load_fail">加载失败</string>
+    <string name="jiyu">学期寄语</string>
+    <string name="jiangcheng">学期奖惩</string>
+    <string name="zongjie">学期总结</string>
+    <string name="peingyu">班主任评语</string>
+</resources>

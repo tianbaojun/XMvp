@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/item_selector_backgroud"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_10">
+        <TextView
+            android:id="@+id/type_tv"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/text_color28" />
+
+        <TextView
+            android:id="@+id/subject_tv"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/dp_2"
+            android:textColor="@color/text_color28" />
+
+        <TextView
+            android:id="@+id/class_tv"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/dp_2"
+            android:textColor="@color/text_color28" />
+
+        <!--<ImageView-->
+        <!--android:id="@+id/pic_iv"-->
+        <!--android:layout_width="@dimen/dp_0"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:textColor="@color/text_color28"-->
+        <!--android:layout_weight="1"-->
+        <!--android:gravity="center"/>-->
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:background="@color/text_colore5"/>
+</LinearLayout>

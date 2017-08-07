@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pic_photo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_150"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/pic_head_photo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/select_from_the_album"
+            android:textColor="@color/activity_select_pic_popup_window_text"
+            android:textSize="@dimen/sp_18" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.5"
+            android:background="@color/text_color9c"/>
+
+        <TextView
+            android:id="@+id/pic_headimg_photo"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:textSize="@dimen/sp_18"
+            android:textColor="@color/activity_select_pic_popup_window_text"
+            android:gravity="center"
+            android:text="@string/photograph"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.5"
+            android:background="@color/text_color9c"/>
+
+        <TextView
+            android:id="@+id/pic_headimg_cancle"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:textSize="@dimen/sp_18"
+            android:textColor="@color/red"
+            android:gravity="center"
+            android:text="@string/pickerview_cancel"/>
+    </LinearLayout>
+
+</RelativeLayout>
+

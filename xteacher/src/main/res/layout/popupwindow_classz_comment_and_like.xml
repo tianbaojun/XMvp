@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/comment_and_like_rl"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/dp_30"
+    android:layout_centerVertical="true"
+    android:background="@drawable/btn_rectangle_radio_black_background"
+    android:visibility="visible">
+
+    <TextView
+        android:id="@+id/like"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_30"
+        android:layout_centerVertical="true"
+        android:drawableLeft="@mipmap/classz_moments_like"
+        android:drawablePadding="@dimen/dp_5"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        android:text="@string/classz_moments_like"
+        android:textColor="@color/white" />
+
+    <View
+        android:layout_width="@dimen/dp_0.5"
+        android:layout_height="@dimen/dp_30"
+        android:layout_toRightOf="@id/like"
+        android:background="@color/black" />
+
+    <TextView
+        android:id="@+id/comment"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_30"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_toRightOf="@id/like"
+        android:drawableLeft="@mipmap/classz_moments_comment_icon"
+        android:drawablePadding="@dimen/dp_5"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:text="@string/classz_moments_comment"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

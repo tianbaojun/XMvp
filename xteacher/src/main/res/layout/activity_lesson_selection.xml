@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="pro.ui.activity.xkgl.activity.LessonSelectionActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_43"
+        android:background="@color/title_background_red">
+
+        <TextView
+            android:id="@+id/title_back_img"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:drawableLeft="@mipmap/title_back"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_15"
+            android:paddingRight="@dimen/dp_15"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/yuanjiao_out"
+            android:padding="@dimen/dp_2"
+            android:layout_height="@dimen/dp_30">
+            <TextView
+                android:id="@+id/chooseable_lesson"
+                android:text="可选课程"
+                android:textSize="@dimen/sp14"
+                android:layout_width="@dimen/dp_0"
+                android:gravity="center"
+                android:textColor="@color/main_bottom_text_color"
+                android:layout_height="match_parent"
+                android:background="@drawable/yuanjiao_message_white"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/dp_5"
+                android:paddingRight="@dimen/dp_5"/>
+
+            <TextView
+                android:id="@+id/choosen_lesson"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/yuanjiao_contacts"
+                android:gravity="center"
+                android:text="已选课程"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp14"
+                android:paddingLeft="@dimen/dp_5"
+                android:paddingRight="@dimen/dp_5" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_35.5"
+        android:orientation="horizontal"
+        android:background="@color/gray_d">
+        <TextView
+            android:id="@+id/student_no_tv"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:textColor="@color/list_title_text_color"
+            android:textSize="@dimen/sp13"
+            android:text="编号"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/subject_name_tv"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:textColor="@color/list_title_text_color"
+            android:textSize="@dimen/sp13"
+            android:text="课程"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/subject_attendance_tv"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/list_title_text_color"
+            android:textSize="@dimen/sp13"
+            android:text="教师"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/subject_score_tv"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/list_title_text_color"
+            android:textSize="@dimen/sp13"
+            android:text="人数"
+            android:gravity="center"/>
+    </LinearLayout>
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

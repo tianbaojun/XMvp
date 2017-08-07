@@ -1,0 +1,353 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+def gitSha() {
+    try {
+        //在运行过程中，我们需要验证基准apk包的tinkerId是否等于补丁包的tinkerId。这
+        // 个是决定补丁包能运行在哪些基准包上面，一般来说我们可以使用git版本号、versionName等等。
+        //这里我使用versionName, 每次版本号修改必须这里
+//        String gitRev = 'git rev-parse --short HEAD'.execute(null, project.rootDir).text.trim()
+//        String gitRev= '2'
+        String gitRev = '1.3.0'
+        if (gitRev == null) {
+            throw new GradleException("can't get git rev, you should add git to system path or just input test value, such as 'testTinkerId'")
+        }
+        return gitRev
+    } catch (Exception e) {
+        throw new GradleException("can't get git rev, you should add git to system path or just input test value, such as 'testTinkerId'")
+    }
+}
+
+def javaVersion = JavaVersion.VERSION_1_7
+
+
+
+android {
+
+    compileSdkVersion 23
+    buildToolsVersion '25.0.0'
+
+    compileOptions {
+        sourceCompatibility javaVersion
+        targetCompatibility javaVersion
+    }
+    //recommend
+    dexOptions {
+        jumboMode = true
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    signingConfigs {
+        release {
+            try {
+                storeFile file("./keystore/captailgodwin-qxy.jks")
+                storePassword "12388888"
+                keyAlias "com.hzzp"
+                keyPassword "12388888"
+            } catch (ex) {
+                throw new InvalidUserDataException(ex.toString())
+            }
+        }
+        /*debug {
+            try {
+                storeFile file("./keystore/captailgodwin-qxy.jks")
+                storePassword "12388888"
+                keyAlias "com.hzzp"
+                keyPassword "12388888"
+            } catch (ex) {
+                throw new InvalidUserDataException(ex.toString())
+            }
+        }*/
+    }
+
+    defaultConfig {
+        applicationId "com.zjhz.teacher"
+        minSdkVersion 16
+        targetSdkVersion 19
+        versionCode 15
+        versionName "1.3.0"
+        multiDexEnabled true
+        buildConfigField "String", "MESSAGE", "\"I am the base apk\""
+//        buildConfigField "String", "MESSAGE", "\"I am the patch apk\""
+
+        buildConfigField "String", "TINKER_ID", "\"${getTinkerIdValue()}\""
+//        buildConfigField "String", "PLATFORM",  "\"all\""    \\这个字段放到tinker模块
+        ndk {
+            abiFilters 'armeabi','x86'
+        }
+    }
+
+
+    packagingOptions {
+        exclude 'META-INF/maven/com.nineoldandroids/library/pom.xml'
+        exclude 'META-INF/maven/com.nineoldandroids/library/pom.properties'
+//        exclude 'META-INF/maven/com.belerweb/pinyin4j/pom.xml'
+//        exclude 'META-INF/maven/com.belerweb/pinyin4j/pom.properties'
+    }
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java']
+            resources.srcDirs = ['src/main/resources']
+            aidl.srcDirs = ['src/main/aidl']
+            renderscript.srcDirs = ['src/maom']
+            res.srcDirs = ['src/main/res']
+            assets.srcDirs = ['src/main/assets']
+            jniLibs.srcDirs = ['libs']
+        }
+        release.setRoot('build-types/release')
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        //      将调试时候的apk编译成打包之后的状态
+        debug {
+            minifyEnabled false
+            zipAlignEnabled true
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+}
+
+def bakPath = file("${buildDir}/bakApk/")
+ext {
+    //for some reason, you may want to ignore tinkerBuild, such as instant run debug build?
+    tinkerEnabled = true
+
+    //for normal build
+    //old apk file to build patch apk
+    tinkerOldApkPath = "${bakPath}/app-release-1.1.5-0425-10-21-27.apk"
+    //proguard mapping file to build patch apk
+    tinkerApplyMappingPath = "${bakPath}/app-release-1.1.5-0425-10-21-27-mapping.txt"
+    //resource R.txt to build patch apk, must input if there is resource changed
+    tinkerApplyResourcePath = "${bakPath}/app-release-1.1.5-0425-10-21-27-R.txt"
+
+    //only use for build all flavor, if not, just ignore this field
+    tinkerBuildFlavorDirectory = "${bakPath}/app-release-1.1.5-0425-10-21-27"
+}
+
+
+def getOldApkPath() {
+    return hasProperty("OLD_APK") ? OLD_APK : ext.tinkerOldApkPath
+}
+
+def getApplyMappingPath() {
+    return hasProperty("APPLY_MAPPING") ? APPLY_MAPPING : ext.tinkerApplyMappingPath
+}
+
+def getApplyResourceMappingPath() {
+    return hasProperty("APPLY_RESOURCE") ? APPLY_RESOURCE : ext.tinkerApplyResourcePath
+}
+
+def getTinkerIdValue() {
+    return hasProperty("TINKER_ID") ? TINKER_ID : gitSha()
+}
+
+def buildWithTinker() {
+    return hasProperty("TINKER_ENABLE") ? TINKER_ENABLE : ext.tinkerEnabled
+}
+
+def getTinkerBuildFlavorDirectory() {
+    return ext.tinkerBuildFlavorDirectory
+}
+
+if (buildWithTinker()) {
+    apply plugin: 'com.tencent.tinker.patch'
+
+    tinkerPatch {
+        oldApk = getOldApkPath()
+        ignoreWarning = false
+        useSign = true
+        tinkerEnable = buildWithTinker()
+        buildConfig {
+            applyMapping = getApplyMappingPath()
+            applyResourceMapping = getApplyResourceMappingPath()
+            tinkerId = getTinkerIdValue()
+            keepDexApply = false
+        }
+
+        dex {
+            dexMode = "jar"
+            pattern = ["classes*.dex",
+                       "assets/secondary-dex-?.jar"]
+            loader = [
+                    //use sample, let BaseBuildInfo unchangeable with tinker
+                    "tinker.sample.android.app.BaseBuildInfo"
+            ]
+        }
+
+        lib {
+            pattern = ["lib/*/*.so"]
+        }
+
+        res {
+            pattern = ["res/*", "assets/*", "resources.arsc", "AndroidManifest.xml"]
+            ignoreChange = ["assets/sample_meta.txt"]
+            largeModSize = 100
+        }
+
+        packageConfig {
+            configField("patchMessage", "tinker is sample to use")
+            configField("platform", "all")
+            configField("patchVersion", "1.0")
+        }
+        //or you can add config filed outside, or get meta value from old apk
+        //project.tinkerPatch.packageConfig.configField("test1", project.tinkerPatch.packageConfig.getMetaDataFromOldApk("Test"))
+        //project.tinkerPatch.packageConfig.configField("test2", "sample")
+        sevenZip {
+            zipArtifact = "com.tencent.mm:SevenZip:1.1.10"
+//        path = "/usr/local/bin/7za"
+        }
+    }
+
+    List<String> flavors = new ArrayList<>();
+    project.android.productFlavors.each { flavor ->
+        flavors.add(flavor.name)
+    }
+    boolean hasFlavors = flavors.size() > 0
+    /**
+     * bak apk and mapping
+     */
+    android.applicationVariants.all { variant ->
+        /**
+         * task type, you want to bak
+         */
+        def taskName = variant.name
+        def date = new Date().format("MMdd-HH-mm-ss")
+
+        tasks.all {
+//            if ("assemble${taskName.capitalize()}".equalsIgnoreCase(it.name)) {
+            if ("assembleRelease".equalsIgnoreCase(it.name)) {
+                it.doLast {
+                    copy {
+                        def fileNamePrefix = "${project.name}-${variant.baseName}"
+                        def newFileNamePrefix = hasFlavors ? "${fileNamePrefix}-${getTinkerIdValue()}" : "${fileNamePrefix}-${getTinkerIdValue()}-${date}"
+
+                        def destPath = hasFlavors ? file("${bakPath}/${project.name}-${date}/${variant.flavorName}") : bakPath
+                        from variant.outputs.outputFile
+                        into destPath
+                        rename { String fileName ->
+                            fileName.replace("${fileNamePrefix}.apk", "${newFileNamePrefix}.apk")
+                        }
+
+                        from "${buildDir}/outputs/mapping/${variant.dirName}/mapping.txt"
+                        into destPath
+                        rename { String fileName ->
+                            fileName.replace("mapping.txt", "${newFileNamePrefix}-mapping.txt")
+                        }
+
+                        from "${buildDir}/intermediates/symbols/${variant.dirName}/R.txt"
+                        into destPath
+                        rename { String fileName ->
+                            fileName.replace("R.txt", "${newFileNamePrefix}-R.txt")
+                        }
+                    }
+                }
+            }
+        }
+    }
+    project.afterEvaluate {
+        //sample use for build all flavor for one bespeakTime
+        if (hasFlavors) {
+            task(tinkerPatchAllFlavorRelease) {
+                group = 'tinker'
+                def originOldPath = getTinkerBuildFlavorDirectory()
+                for (String flavor : flavors) {
+                    def tinkerTask = tasks.getByName("tinkerPatch${flavor.capitalize()}Release")
+                    dependsOn tinkerTask
+                    def preAssembleTask = tasks.getByName("process${flavor.capitalize()}ReleaseManifest")
+                    preAssembleTask.doFirst {
+                        String flavorName = preAssembleTask.name.substring(7, 8).toLowerCase() + preAssembleTask.name.substring(8, preAssembleTask.name.length() - 15)
+                        project.tinkerPatch.oldApk = "${originOldPath}/${flavorName}/${project.name}-${flavorName}-release.apk"
+                        project.tinkerPatch.buildConfig.applyMapping = "${originOldPath}/${flavorName}/${project.name}-${flavorName}-release-mapping.txt"
+                        project.tinkerPatch.buildConfig.applyResourceMapping = "${originOldPath}/${flavorName}/${project.name}-${flavorName}-release-R.txt"
+
+                    }
+
+                }
+            }
+
+            task(tinkerPatchAllFlavorDebug) {
+                group = 'tinker'
+                def originOldPath = getTinkerBuildFlavorDirectory()
+                for (String flavor : flavors) {
+                    def tinkerTask = tasks.getByName("tinkerPatch${flavor.capitalize()}Debug")
+                    dependsOn tinkerTask
+                    def preAssembleTask = tasks.getByName("process${flavor.capitalize()}DebugManifest")
+                    preAssembleTask.doFirst {
+                        String flavorName = preAssembleTask.name.substring(7, 8).toLowerCase() + preAssembleTask.name.substring(8, preAssembleTask.name.length() - 13)
+                        project.tinkerPatch.oldApk = "${originOldPath}/${flavorName}/${project.name}-${flavorName}-debug.apk"
+                        project.tinkerPatch.buildConfig.applyMapping = "${originOldPath}/${flavorName}/${project.name}-${flavorName}-debug-mapping.txt"
+                        project.tinkerPatch.buildConfig.applyResourceMapping = "${originOldPath}/${flavorName}/${project.name}-${flavorName}-debug-R.txt"
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    compile files('libs/jpush-android-2.1.5.jar')
+    compile files('libs/hyphenatechat_3.1.4.jar')
+    compile files('libs/org.apache.http.legacy.jar')
+    compile files('libs/BaiduLBS_Android.jar')
+    compile files('libs/jsoup-1.8.1.jar')
+    compile project(':smart-loading-layout')
+    compile "com.tencent.tinker:tinker-android-lib:${TINKER_VERSION}"
+    provided "com.tencent.tinker:tinker-android-anno:${TINKER_VERSION}"
+    compile project(path: ':tinker')
+    apt "com.jakewharton:butterknife-compiler:8.4.0"
+    //    androidTestCompile 'org.testng:testng:6.9.6'
+
+    //    androidTestCompile 'junit:junit:4.12'
+
+    //ListView万能adapter
+
+    //    compile 'com.google.android.gms:play-services:10.2.1'
+    compile files('libs/alipaySingle-20170510.jar')
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:recyclerview-v7:23.4.0'
+    compile 'com.android.support:cardview-v7:23.4.0'
+    compile 'pub.devrel:easypermissions:0.1.7'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.orhanobut:dialogplus:1.11@aar'
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'eu.the4thfloor.volley:com.android.volley:2015.05.28'
+    compile 'com.alibaba:fastjson:1.2.13'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.squareup.okio:okio:1.9.0'
+    compile 'com.squareup.okhttp:okhttp:2.7.5'
+    compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+    compile 'net.qiujuer.genius:ui:2.0.0-beta8'
+    compile 'net.qiujuer.genius:res:2.0.0-beta8'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.zhy:base-rvadapter:3.0.3'
+    compile 'com.zhy:base-adapter:3.0.3'
+    compile 'cn.yipianfengye.android:zxing-library:2.1'
+    compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.droidninja:filepicker:2.0.0'
+    compile 'com.google.android.gms:play-services-appindexing:9.8.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile 'com.shuyu:GSYVideoPlayer:2.0.2'
+    compile 'com.github.limedroid:XDroidMvp:v1.5.0'
+    //    compile project(':universalvideoview')
+//    compile project(':universalvideoview')
+}

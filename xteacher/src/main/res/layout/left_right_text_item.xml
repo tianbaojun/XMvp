@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_44"
+    android:background="@drawable/rec_grayd_white_top_bottom"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingLeft="@dimen/dp_10"
+    android:paddingRight="@dimen/dp_10">
+
+    <TextView
+        android:id="@+id/left"
+        style="@style/rl_textview_label_left_center_ver"
+        android:text="任课教师" />
+
+    <TextView
+        android:id="@+id/right"
+        style="@style/rl_textview_label_right_center_ver" />
+</RelativeLayout>

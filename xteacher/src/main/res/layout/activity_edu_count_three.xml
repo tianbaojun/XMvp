@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/education_background"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_rectangle_shape_education_top_bottom"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/edu_choose_start_date"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_30"
+                android:layout_weight="1"
+                android:background="@drawable/btn_rectangle_shape_education"
+                android:gravity="center"
+                android:hint="@string/education_choose_start_date" />
+
+            <TextView
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text="至" />
+
+            <TextView
+                android:id="@+id/edu_choose_end_date"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_weight="1"
+                android:background="@drawable/btn_rectangle_shape_education"
+                android:gravity="center"
+                android:hint="@string/education_choose_end_date" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/edu_choose_week"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_30"
+                android:layout_weight="1"
+                android:background="@drawable/btn_rectangle_shape_education"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/edu_choose_month"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_weight="1"
+                android:background="@drawable/btn_rectangle_shape_education"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/edu_choose_class"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_30"
+                android:layout_weight="1"
+                android:background="@drawable/btn_rectangle_shape_education"
+                android:clickable="true"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:id="@+id/btn_search"
+            android:background="@drawable/btn_rectangle_shape"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/ok"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp16"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/source"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@drawable/btn_rectangle_shape_education_top_bottom"
+                android:padding="@dimen/dp_10">
+
+                <TextView
+                    android:id="@+id/class_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/education_classz"
+                    android:textSize="@dimen/sp_16"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/show_class"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/class_tv"
+                    android:layout_alignParentRight="true"
+                    android:text="100.3" />
+
+                <View
+                    android:id="@+id/edu_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0.5"
+                    android:layout_below="@id/class_tv"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:background="@drawable/ease_btn_cancel_bj" />
+
+                <com.zjhz.teacher.ui.view.ScrollViewWithListView
+                    android:id="@+id/classz_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/edu_line"
+                    android:divider="@null" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@drawable/btn_rectangle_shape_education_top_bottom"
+                android:padding="@dimen/dp_10">
+
+                <TextView
+                    android:id="@+id/person_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/education_person"
+                    android:textSize="@dimen/sp_16"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/show_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/person_tv"
+                    android:layout_alignParentRight="true"
+                    android:text="100.3" />
+
+                <View
+                    android:id="@+id/edu_line3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0.5"
+                    android:layout_below="@id/person_tv"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:background="@drawable/ease_btn_cancel_bj" />
+
+                <com.zjhz.teacher.ui.view.ScrollViewWithListView
+                    android:id="@+id/person_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/edu_line3"
+                    android:divider="@null" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@drawable/btn_rectangle_shape_education_top_bottom"
+                android:padding="@dimen/dp_10">
+
+                <TextView
+                    android:id="@+id/total_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/education_total"
+                    android:textSize="@dimen/sp_16"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/show_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/total_tv"
+                    android:layout_alignParentRight="true"
+                    android:text="100.3" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0.5"
+                    android:layout_below="@id/total_tv"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:background="@drawable/ease_btn_cancel_bj"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
+
+

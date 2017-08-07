@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="@dimen/dp_0"
+    android:background="@color/schedule_griditems_bg">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:background="@drawable/schedule_bg_gv"
+        android:padding="0dp">
+
+        <TextView
+            android:id="@+id/adapter_my_schedule_grid_item_tv_item"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_43.5"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/dp_8.5"
+            android:gravity="center"
+            android:maxLines="3"
+            android:text="二（3）班"
+            android:textColor="@color/schedule_commo_text_color"
+            android:textSize="@dimen/sp12" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

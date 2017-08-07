@@ -1,0 +1,21 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zjhz.teacher.ui.fragment.LeaveFragment">
+
+    <com.zjhz.teacher.ui.view.RefreshLayout
+        android:id="@+id/leave_fragment_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+        <ListView
+            android:id="@+id/leave_fragment_refresh_listview"
+            android:layout_width="match_parent"
+            android:dividerHeight="@dimen/dp_3"
+            android:divider="#00000000"
+            android:listSelector="@color/lightest_gray"
+            android:layout_height="match_parent" />
+    </com.zjhz.teacher.ui.view.RefreshLayout>
+
+</FrameLayout>

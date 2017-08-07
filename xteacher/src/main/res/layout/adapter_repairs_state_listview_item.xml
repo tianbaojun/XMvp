@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:dash = "http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+    android:paddingRight="@dimen/dp_20" >
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_marginLeft="19dp"
+        android:orientation="vertical"
+        android:layout_width="@dimen/dp_10"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+        <!--<View
+            android:id="@+id/view_1"
+            android:visibility="visible"
+            android:background="@color/green_color36B421"
+            android:layout_width="@dimen/dp_1"
+            android:layout_height="@dimen/dp_28"/>-->
+        <com.zjhz.teacher.ui.view.DashedLineView
+            dash:lineColor = "@color/green_color36B421"
+            android:id="@+id/view_1"
+            android:visibility="visible"
+            android:layout_width="@dimen/dp_1"
+            android:layout_height="@dimen/dp_28"/>
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/dp_10"
+            android:layout_height="@dimen/dp_10"
+            android:layout_below="@+id/view_1"
+            android:background="@drawable/shape_dashed_green"
+            />
+       <!-- <View
+            android:id="@+id/view_2"
+            android:layout_width="@dimen/dp_1"
+            android:layout_height="65dp"
+            android:background="@color/green_color36B421"
+            android:layout_below="@+id/image"/>-->
+        <com.zjhz.teacher.ui.view.DashedLineView
+            dash:lineColor= "@color/green_color36B421"
+            android:id="@+id/view_2"
+            android:layout_width="@dimen/dp_1"
+            android:layout_height="@dimen/dp_65"
+            android:layout_below="@+id/image"/>
+    </LinearLayout>
+    <!--右侧数据-->
+    <LinearLayout
+        android:layout_toRightOf="@id/ll"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/adapter_repairs_state_list_item_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_25"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_toRightOf="@+id/image"
+            android:text="@string/already_applied"/>
+        <RelativeLayout
+            android:id="@+id/relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_toRightOf="@+id/adapter_repairs_state_list_item_text"
+            android:background="@mipmap/repairs_proser_state"
+            android:padding="@dimen/dp_10" >
+            <com.zjhz.teacher.ui.view.CircleImageView
+                android:id="@+id/adapter_repairs_state_list_item_image"
+                android:layout_width="@dimen/dp_22"
+                android:layout_height="@dimen/dp_22"
+                android:contentDescription="@null"
+                app:border_color="@color/transparent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:src="@mipmap/header"
+                app:border_width="@dimen/dp_0" />
+            <TextView
+                android:id="@+id/adapter_repairs_state_list_item_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/text_color65"
+                android:text="测试数据"
+                android:textSize="@dimen/sp10" />
+            <TextView
+                android:id="@+id/adapter_repairs_state_list_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/adapter_repairs_state_list_item_time"
+                android:layout_toRightOf="@+id/adapter_repairs_state_list_item_image"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:textColor="@color/text_colore4288c4"
+                android:text="测试数据"
+                android:textSize="@dimen/sp12" />
+            <TextView
+                android:id="@+id/adapter_repairs_state_list_item_content"
+                android:layout_below="@+id/adapter_repairs_state_list_item_name"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/adapter_repairs_state_list_item_image"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:maxLength="20"
+                android:textSize="@dimen/sp12" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

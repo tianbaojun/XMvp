@@ -1,0 +1,20 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zjhz.teacher.ui.fragment.PickUpFragment">
+
+    <com.zjhz.teacher.ui.view.RefreshLayout
+        android:id="@+id/pick_up_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/pick_up_fragment_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="0dp"
+            android:divider="@null"
+            android:background="@color/background"/>
+    </com.zjhz.teacher.ui.view.RefreshLayout>
+
+</FrameLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/adapter_statistics_of_moral_list_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_selector_backgroud"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/adapter_statistics_of_moral_list_content"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_48"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="专项检查" />
+
+        <View
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_48"
+            android:layout_weight="0.1"></View>
+
+        <TextView
+            android:id="@+id/adapter_statistics_of_moral_list_score"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_48"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="30" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/adapter_statistics_of_moral_list_view"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0.5"
+        android:layout_below="@+id/adapter_statistics_of_moral_list_ll"
+        android:background="@color/colorb7b7b7" />
+</RelativeLayout>

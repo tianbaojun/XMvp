@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--base theme light-->
+    <style name="Base.App.Theme.Light" parent="@style/Theme.AppCompat.Light">
+
+        <!--text style-->
+        <item name="editTextColor">@color/gray</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorLink">#0b9a27</item>
+
+        <!--action style-->
+        <item name="actionBarStyle">@style/App.Widget.ActionBar</item>
+        <item name="homeAsUpIndicator">@mipmap/btn_back_normal</item>
+
+        <!--action popup-->
+        <item name="actionBarPopupTheme">@style/ThemeOverlay.AppCompat.Dark</item>
+
+        <!--action menu-->
+        <item name="actionMenuTextColor">@color/white</item>
+
+        <!--action mode-->
+
+        <!--toolbar style-->
+        <item name="toolbarStyle">@style/App.Widget.Light.Toolbar</item>
+
+        <!--button style-->
+        <item name="android:buttonStyle">@style/App.Widget.Button</item>
+
+
+        <!-- In this custom widget style -->
+        <item name="gTextViewStyle">@style/Genius.Widget.TextView</item>
+        <item name="gButtonStyle">@style/Genius.Widget.Button</item>
+        <item name="gFloatActionButtonStyle">@style/Genius.Widget.FloatActionButton</item>
+        <item name="gSeekBarStyle">@style/Genius.Widget.SeekBar</item>
+        <item name="gCheckBoxStyle">@style/Genius.Widget.CompoundButton.CheckBox</item>
+        <item name="gEditTextStyle">@style/Genius.Widget.EditText</item>
+        <item name="gLoadingStyle">@style/Genius.Widget.Loading</item>
+        <item name="gImageViewStyle">@style/Genius.Widget.ImageView</item>
+    </style>
+
+    <!-- 日间模式 -->
+    <style name="App.Theme.Light" parent="Base.App.Theme.Light" />
+
+
+
+    <!--作用于搜索界面-->
+    <style name="App.Theme.Translucent" parent="App.Theme.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@color/transparent</item>
+    </style>
+
+    <style name="Base.App.Theme" parent="Base.App.Theme.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Base.App.Theme.NoTitle" parent="App.Theme.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="App.Theme.Tweet.Publish" parent="Base.App.Theme.NoTitle">
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <style name="App.Theme.Tweet.Main" parent="Base.App.Theme.NoTitle" />
+
+    <!--button-->
+    <style name="App.Widget.Button" parent="Widget.AppCompat.Button">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="elevation">0dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--toolbar-->
+    <style name="Base.App.Widget.Toolbar" parent="@style/Widget.AppCompat.Toolbar">
+        <item name="titleTextAppearance">@style/App.TextAppearance.Widget.Toolbar.Title</item>
+        <!--<item name="titleMargin">0dp</item>-->
+        <item name="contentInsetStart">0dp</item>
+        <!--<item name="contentInsetStartWithNavigation">0dp</item>-->
+    </style>
+
+    <style name="App.Widget.Light.Toolbar" parent="Base.App.Widget.Toolbar">
+    </style>
+
+    <style name="App.Widget.Dark.Toolbar" parent="Base.App.Widget.Toolbar">
+    </style>
+
+    <!--text appearance-->
+    <style name="App.TextAppearance.Widget.Toolbar.Title" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="App.TextAppearance.Widget.ActionBar.Title" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#FFF</item>
+    </style>
+
+    <!--action bar-->
+    <style name="App.Widget.ActionBar" parent="@style/Widget.AppCompat.Light.ActionBar">
+        <item name="background">?attr/colorPrimary</item>
+        <item name="titleTextStyle">@style/App.TextAppearance.Widget.ActionBar.Title</item>
+        <item name="contentInsetStart">0dp</item>
+        <!--<item name="contentInsetStartWithNavigation">0dp</item>-->
+        <item name="contentInsetEnd">0dp</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+    <style name="Theme.App.ActionBar" parent="style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <!-- Support library compatibility -->
+        <item name="elevation">0dp</item>
+    </style>
+
+
+</resources>

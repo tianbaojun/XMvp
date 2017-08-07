@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/comment_detail_rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/title_bar"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/dp_5"
+    android:paddingLeft="@dimen/dp_10"
+    android:paddingRight="@dimen/dp_10"
+    android:paddingTop="@dimen/dp_5">
+
+    <com.zjhz.teacher.ui.view.CircleImageView
+        android:id="@+id/comment_header_iv"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_5" />
+
+    <TextView
+        android:id="@+id/comment_username_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/comment_header_iv"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp14" />
+
+    <TextView
+        android:id="@+id/comment_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/comment_content_tv"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_toRightOf="@id/comment_header_iv"
+        android:textColor="@color/gray_d"
+        android:textSize="@dimen/sp12" />
+
+    <TextView
+        android:id="@+id/reply_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/comment_time_tv"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:layout_toRightOf="@+id/comment_time_tv"
+        android:padding="@dimen/dp_2"
+        android:textSize="@dimen/sp10" />
+
+    <TextView
+        android:id="@+id/comment_content_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/comment_username_tv"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_toRightOf="@id/comment_header_iv"
+        android:textColor="@color/text_color65"
+        android:textSize="@dimen/sp14" />
+
+    <TextView
+        android:id="@+id/comment_praise_num"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_20"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/comment_time_tv"
+        android:gravity="center_vertical"
+        android:textColor="@color/gray9"
+        android:textSize="@dimen/sp12"
+        android:layout_marginLeft="@dimen/dp_5"/>
+
+    <ImageView
+        android:id="@+id/dianzan_iv"
+        android:layout_width="@dimen/dp_17"
+        android:layout_height="@dimen/dp_20"
+        android:layout_toLeftOf="@id/comment_praise_num"
+        android:layout_alignTop="@id/comment_time_tv"
+        android:src="@mipmap/dianzan2_nor_1"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/comment_time_delete"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:padding="@dimen/dp_3"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/delete1" />
+
+</RelativeLayout>

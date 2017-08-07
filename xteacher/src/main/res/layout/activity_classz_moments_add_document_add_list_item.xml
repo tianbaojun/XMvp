@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dp_5">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_8"
+        android:background="#F8FAF7"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/classz_moments_add_document_label_textbook"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20"/>
+
+        <!--<pro.widget.TagContainerLayout.TagContainerLayout
+            android:id="@+id/tag_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:container_background_color="#00000000"
+            app:container_border_color="#00000000"
+            app:container_border_radius="0dp"
+            app:horizontal_interval="@dimen/dp_10"
+            app:tag_clickable="true"
+            app:tag_corner_radius="@dimen/dp_5"
+            app:tag_horizontal_padding="@dimen/dp_15"
+            app:tag_max_length="18"
+            app:tag_text_size="@dimen/sp14"
+            app:tag_vertical_padding="@dimen/dp_10"
+            app:vertical_interval="@dimen/dp_10" />-->
+
+    <com.zjhz.teacher.ui.view.ScrollViewWithGridView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        android:paddingBottom="@dimen/dp_10"
+        android:numColumns="3"
+        android:background="@color/white" />
+
+    </LinearLayout>

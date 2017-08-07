@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar" />
+
+    <LinearLayout
+        android:id="@+id/activity_students_current_position_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/activity_personal_calendar_month_day_back"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_margin="@dimen/dp_15">
+
+            <EditText
+                android:id="@+id/activity_students_current_position_ed"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:background="@drawable/yuanjiao"
+                android:gravity="center"
+                android:hint="@string/please_enter_the_student_number_and_name"
+                android:inputType="text"
+                android:paddingRight="@dimen/dp_15"
+                android:textSize="@dimen/sp14" />
+
+            <ImageView
+                android:id="@+id/search_image"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:src="@mipmap/extramural_search"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/dp_10"/>
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/activity_students_current_position_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:background="@drawable/yuanjiao"
+            android:drawableRight="@mipmap/extramural_right"
+            android:gravity="center"
+            android:paddingRight="@dimen/dp_15"
+            android:text="@string/please_choose_grades_and_classes"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/activity_students_current_position_text_time"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/yuanjiao"
+            android:drawableRight="@mipmap/extramural_right"
+            android:gravity="center"
+            android:paddingRight="@dimen/dp_15"
+            android:text="@string/please_enter_history_time"
+            android:textSize="@dimen/sp14"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/activity_students_current_position_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/activity_personal_calendar_month_day_back"
+        android:padding="@dimen/dp_10"
+        android:src="@mipmap/extramural_up" />
+
+    <include layout="@layout/refresh_layout" />
+
+</LinearLayout>

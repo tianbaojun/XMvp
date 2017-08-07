@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_70"
+    android:background="@drawable/item_selector_backgroud"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <com.zjhz.teacher.ui.view.CircleImageView
+        android:id="@+id/repair_image"
+        android:layout_width="@dimen/linkman_fragment_height"
+        android:layout_height="@dimen/linkman_fragment_height"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:contentDescription="@null"
+        android:src="@mipmap/ic_launcher"
+        app:border_color="@color/transparent"
+        app:border_width="@dimen/dp_0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:paddingLeft="@dimen/dp_15"
+        android:paddingRight="@dimen/dp_15"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/applyer_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="李丽丽"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/gray9" />
+            <ImageView
+                android:id="@+id/edit_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/dp_15"
+                android:paddingRight="@dimen/dp_15"
+                android:src="@mipmap/bianji1"/>
+            <TextView
+                android:id="@+id/release_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="1小时前"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/gray9" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="@dimen/dp_35"
+                android:layout_height="@dimen/dp_16"
+                android:gravity="center"
+                android:text="报修"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12"
+                android:background="@color/leave_bj"/>
+
+            <TextView
+                android:id="@+id/summary_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:text="我想请假我想请假我想请假"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_16"
+                android:singleLine="true" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/type_tv_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:src="@mipmap/audit_ing"/>
+                <TextView
+                    android:id="@+id/type_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:gravity="right"
+                    android:text="年级组审批"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/leave_audit" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:orientation="vertical"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:paddingLeft="@dimen/dp_15"-->
+    <!--android:background="@drawable/item_selector_backgroud"-->
+    <!--&gt;-->
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/dp_33">-->
+        <!--<TextView-->
+            <!--android:id="@+id/applyer_tv"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:text="报修人:某某"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:textColor="@color/text_color65"-->
+            <!--android:textSize="@dimen/sp_14"-->
+            <!--/>-->
+        <!--<ImageView-->
+            <!--android:id="@+id/edit_iv"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:src="@mipmap/edit_icon"-->
+            <!--android:paddingLeft="@dimen/dp_10"-->
+            <!--android:paddingRight="@dimen/dp_25"-->
+            <!--android:clickable="true"-->
+            <!--android:visibility="visible"-->
+            <!--/>-->
+    <!--</RelativeLayout>-->
+    <!--<TextView-->
+        <!--android:id="@+id/summary_tv"-->
+        <!--android:paddingRight="@dimen/dp_15"-->
+        <!--android:visibility="visible"-->
+        <!--android:layout_marginTop="@dimen/dp_5"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textColor="@color/text_color28"-->
+        <!--android:textSize="@dimen/sp_16"-->
+        <!--android:lineSpacingExtra="@dimen/space_1.5"-->
+        <!--android:ellipsize="end"-->
+        <!--/>-->
+
+    <!--<LinearLayout-->
+        <!--style="@style/fly_ll_leave_list"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/release_time_tv"-->
+            <!--android:layout_width="@dimen/dp_0"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:layout_weight="3"-->
+            <!--android:gravity="left"-->
+            <!--android:text="1小时前"-->
+            <!--android:textColor="@color/text_color65"-->
+            <!--android:textSize="@dimen/sp_14" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/type_tv"-->
+            <!--style="@style/fly_text_common"-->
+            <!--android:layout_width="@dimen/dp_0"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:layout_weight="1.3"-->
+            <!--android:background="@mipmap/leave_fix"-->
+            <!--android:gravity="center"-->
+            <!--android:padding="2dp"-->
+            <!--android:textColor="@color/text_color32" />-->
+
+        <!--<View-->
+            <!--android:layout_width="@dimen/dp_0"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="0.3" />-->
+
+    <!--</LinearLayout>-->
+
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/dp_0.5"-->
+        <!--android:background="@color/text_colore5"/>-->
+<!--</LinearLayout>-->

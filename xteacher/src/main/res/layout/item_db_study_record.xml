@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="study_record"
+            type="com.zjhz.teacher.bean.GrowthStudyRecord"/>
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_5">
+        <TextView
+            android:id="@+id/record_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{study_record.stuscoreTypeName}"
+            android:textStyle="bold"
+            android:textSize="@dimen/sp16"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/record_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@{study_record.totalScore}"
+            android:textStyle="bold"
+            android:textSize="@dimen/sp16"
+            android:textColor="@color/black"/>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.5"
+            android:layout_below="@id/record_type"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@color/gray_d" />
+
+        <TextView
+            android:id="@+id/class_ranking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line"
+            android:layout_marginTop="@dimen/dp_5"
+            android:textSize="@dimen/sp12"
+            android:textColor="@color/gray9"
+            android:text="@{String.valueOf(study_record.classRanking)}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line"
+            android:layout_toRightOf="@id/class_ranking"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_5"
+            android:textSize="@dimen/sp12"
+            android:textColor="@color/gray9"
+            android:text="@{String.valueOf(study_record.gradeRanking)}"/>
+
+        <com.zjhz.teacher.ui.view.ScrollViewWithGridView
+            android:id="@+id/record_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="4"
+            android:verticalSpacing="@dimen/dp_5"
+            android:horizontalSpacing="@dimen/dp_5"
+            android:background="@color/white"
+            android:layout_below="@id/class_ranking"
+            android:layout_marginTop="@dimen/dp_20"/>
+
+    </RelativeLayout>
+</layout>

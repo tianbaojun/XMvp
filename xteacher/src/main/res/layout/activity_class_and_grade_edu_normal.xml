@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zjhz.teacher.ui.activity.ClassAndGradeEduNormalActivity">
+
+    <include layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/text_colord2"
+        android:padding="@dimen/dp_15"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/activity_class_and_grade_edu_normal_schem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/program_name_special_inspection"/>
+
+        <TextView
+            android:id="@+id/activity_class_and_grade_edu_normal_clazz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/check_object"/>
+
+        <TextView
+            android:id="@+id/activity_class_and_grade_edu_normal_time"
+            android:layout_below="@+id/activity_class_and_grade_edu_normal_schem"
+            android:paddingTop="@dimen/dp_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/check_time"/>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/activity_class_and_grade_edu_normal_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

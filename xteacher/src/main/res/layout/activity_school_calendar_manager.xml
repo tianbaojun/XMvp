@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_bar"/>
+
+    <!-- 日历时间选择栏 -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_30"
+        android:background="@color/activity_personal_calendar_month_day_back"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/activity_school_calendar_manager_month"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:text=""/>
+
+        <com.zjhz.teacher.ui.view.calendar.MyWeekView
+            android:layout_width="@dimen/dp_0"
+            android:layout_marginRight="@dimen/space_7"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/dp_30"
+            android:layout_weight="9" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+
+        android:orientation="horizontal" >
+
+        <!--android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/space_7"-->
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/activity_school_calendar_manager_one"
+                style="@style/scholl_manager_itme" />
+
+            <!--<View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#989898"/>-->
+
+            <TextView
+                android:id="@+id/activity_school_calendar_manager_two"
+                style="@style/scholl_manager_itme" />
+
+            <!--<View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#989898"/>-->
+
+            <TextView
+                android:id="@+id/activity_school_calendar_manager_three"
+                style="@style/scholl_manager_itme" />
+
+            <!--<View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#989898"/>-->
+
+            <TextView
+                android:id="@+id/activity_school_calendar_manager_four"
+                style="@style/scholl_manager_itme" />
+
+            <!--<View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#989898"/>-->
+
+            <TextView
+                android:id="@+id/activity_school_calendar_manager_five"
+                style="@style/scholl_manager_itme" />
+
+            <!--<View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#989898"/>-->
+
+            <TextView
+                android:id="@+id/activity_school_calendar_manager_six"
+                style="@style/scholl_manager_itme" />
+
+            <!--<View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#989898"/>-->
+
+        </LinearLayout>
+
+        <com.zjhz.teacher.ui.view.calendar.MonthView
+            android:id="@+id/activity_school_calendar_manager_monthDateView"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_240"
+            android:layout_weight="9"/>
+    </LinearLayout>
+
+    <com.zjhz.teacher.ui.view.PullToRefreshView
+        android:id="@+id/activity_school_calendar_manager__pull_refresh_view"
+        android:layout_width="match_parent"
+        android:background="@color/activity_personal_calendar_month_day_back"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/activity_school_calendar_manager__list_view"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/space_7"
+            android:divider="@null"
+            android:dividerHeight="@dimen/dp_0"
+            android:listSelector="@android:color/transparent"
+            android:layout_height="match_parent" />
+    </com.zjhz.teacher.ui.view.PullToRefreshView>
+
+
+</LinearLayout>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nv_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="end"
+    android:clickable="true"
+    android:background="@color/text_colore5"
+    android:orientation="vertical">
+
+    <include layout="@layout/navigation_header"/>
+
+    <LinearLayout
+        android:id="@+id/drawer_layout_classes"
+        style="@style/fly_ll_common_itme"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/drawer_layout_classes_name"
+            style="@style/fly_text_common"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="3"
+            android:textColor="@color/text_color32"
+            android:text="@string/work_manager_one" />
+        <TextView
+            android:id="@+id/classname_tv"
+            style="@style/fly_text_common"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:textColor="@color/text_color32"/>
+        <ImageView
+            android:id="@+id/enter_iv"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/work_arrow" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/drawer_layout_subject"
+        style="@style/fly_ll_common_itme"
+        android:layout_marginTop="@dimen/dp_1"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/drawer_layout_subject_name"
+            style="@style/fly_text_common"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="3"
+            android:textColor="@color/text_color32"
+            android:text="@string/work_manager_two" />
+        <TextView
+            android:id="@+id/subjectname_tv"
+            style="@style/fly_text_common"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:textColor="@color/text_color32" />
+        <ImageView
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/work_arrow" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/drawer_layout_time"
+        style="@style/fly_ll_common_itme"
+        android:layout_marginTop="@dimen/dp_1"
+        android:visibility="gone"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/drawer_layout_subject_name_time"
+            style="@style/fly_text_common"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="3"
+            android:textColor="@color/text_color28"
+            android:text="@string/date" />
+        <TextView
+            android:id="@+id/subjectname_tv_time"
+            style="@style/fly_text_common"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:textColor="@color/text_color32" />
+        <ImageView
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/work_arrow" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/drawer_layout_state"
+        style="@style/fly_ll_common_itme"
+        android:layout_marginTop="@dimen/dp_1"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/drawer_layout_tstate"
+            style="@style/fly_text_common"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="3"
+            android:textColor="@color/text_color32"
+            android:text="@string/repair_state" />
+        <TextView
+            android:id="@+id/repair_state"
+            style="@style/fly_text_common"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:textColor="@color/text_color32" />
+        <ImageView
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/work_arrow" />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/drawer_relative"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dp_1"
+        style="@style/fly_ll_common_itme"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/drawer_layout_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            android:textSize="@dimen/sp16"
+            android:text="@string/select_date"/>
+
+        <LinearLayout
+            android:layout_below="@+id/drawer_layout_date"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="@dimen/dp_15"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/drawer_layout_date_start"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_45"
+                android:layout_weight="1"
+                android:hint="@string/please_select_start_time"
+                android:clickable="true"
+                android:gravity="center"
+                android:background="@drawable/yuanjiao"/>
+
+            <View
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"/>
+
+            <TextView
+                android:id="@+id/drawer_layout_date_end"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_45"
+                android:layout_weight="1"
+                android:hint="@string/please_select_deadline"
+                android:clickable="true"
+                android:gravity="center"
+                android:background="@drawable/yuanjiao"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/drawer_layout_clear"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_80"
+        android:clickable="true"
+        android:background="@drawable/yuanjiao"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/drawer_layout_text"
+        android:text="@string/clear_options"/>
+
+</LinearLayout>

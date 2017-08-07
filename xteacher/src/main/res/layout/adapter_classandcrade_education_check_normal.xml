@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/adapter_classandcrade_education_check_normal_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/adapter_classandcrade_education_check_normal_clazz"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/one_grade"
+            android:gravity="center"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/text_color28"
+            android:singleLine="true"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/adapter_classandcrade_education_check_normal_project"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/special_inspection"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/text_color28" />
+
+        <TextView
+            android:id="@+id/adapter_classandcrade_education_check_normal_text"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="1"
+            android:layout_height="@dimen/space_24"
+            android:visibility="visible"
+            android:text=""
+            android:gravity="center" />
+    </LinearLayout>
+    <View
+        android:layout_below="@+id/adapter_classandcrade_education_check_normal_ll"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/text_colore5" />
+
+</RelativeLayout>

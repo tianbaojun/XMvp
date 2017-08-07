@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/leave_add_d"
+    android:layout_gravity="right"
+    android:gravity="center"
+    android:visibility="gone"
+    android:id="@+id/leave_more_btn"
+    android:layout_marginRight="@dimen/dp_6"
+    android:layout_alignParentRight="true">
+
+
+    <TextView
+        android:id="@+id/leave_add_tv"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_height="@dimen/dp_0"
+        android:layout_weight="1"
+        android:text="@string/screen_short"
+        android:textSize="@dimen/sp_14"
+        android:gravity="center"
+        android:drawablePadding="@dimen/dp_10"
+        android:textColor="@color/white"
+        android:drawableLeft="@mipmap/work_side" />
+
+    <TextView
+        android:id="@+id/leave_side_tv"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:layout_weight="1"
+        android:text="@string/cut_off"
+        android:textSize="@dimen/sp_14"
+        android:gravity="center"
+        android:drawablePadding="@dimen/dp_8"
+        android:textColor="@color/white"
+        android:drawableLeft="@mipmap/work_delete" />
+
+</LinearLayout>

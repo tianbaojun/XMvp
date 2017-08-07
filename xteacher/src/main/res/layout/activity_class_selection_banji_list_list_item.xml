@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dp_10">
+    <TextView
+        android:id="@+id/subject_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="数学"
+        android:textColor="@color/gray3"
+        android:textSize="@dimen/sp16"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/num_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5人"
+        android:textColor="@color/gray6"
+        android:textSize="@dimen/sp14"
+        android:layout_alignTop="@id/subject_tv"
+        android:layout_alignBottom="@id/subject_tv"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp_10"/>
+
+    <com.zjhz.teacher.ui.view.ScrollViewWithGridView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="5"
+        android:background="@color/white"
+        android:id="@+id/student_grid"
+        android:verticalSpacing="@dimen/dp_5"
+        android:horizontalSpacing="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_below="@id/subject_tv"
+        android:layout_marginLeft="@dimen/sp10"
+        android:layout_marginRight="@dimen/dp_10"/>
+</RelativeLayout>

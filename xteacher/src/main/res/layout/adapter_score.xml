@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/item_selector_backgroud"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/type_tv"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:textColor="@color/text_color28"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/subject_tv"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:textColor="@color/text_color28"
+            android:lineSpacingExtra="@dimen/dp_2"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/class_tv"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:textColor="@color/text_color28"
+            android:lineSpacingExtra="@dimen/dp_2"
+            android:layout_weight="1.2"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/teacher_name_tv"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:textColor="@color/text_color28"
+            android:layout_weight="1"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:textColor="@color/text_color28"
+            android:layout_weight="1.5"
+            android:gravity="center"/>
+    </LinearLayout>
+    <View
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/text_colore5"/>
+</LinearLayout>

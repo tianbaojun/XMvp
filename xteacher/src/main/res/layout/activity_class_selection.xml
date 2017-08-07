@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout_selection"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="pro.ui.activity.xkgl.activity.ClassSelectionActivity">
+
+        <include layout="@layout/title_bar_selection" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_100"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/zonghe_ll"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="@dimen/dp_48"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:src="@mipmap/zonghe" />
+
+                <TextView
+                    android:id="@+id/zonghe_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="课程查看"
+                    android:textColor="@color/gray3"
+                    android:textSize="@dimen/sp_11" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/banji_ll"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="@dimen/dp_48"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:src="@mipmap/banji" />
+
+                <TextView
+                    android:id="@+id/banji_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="班级选课"
+                    android:textColor="@color/gray3"
+                    android:textSize="@dimen/sp_11" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/jiaoshi_ll"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="@dimen/dp_48"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:src="@mipmap/lesson_record" />
+
+                <TextView
+                    android:id="@+id/jiaoshi_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="课堂记录"
+                    android:textColor="@color/gray3"
+                    android:textSize="@dimen/sp_11" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.5"
+            android:background="@color/gray_d" />
+
+        <FrameLayout
+            android:id="@+id/content_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/zonghe_content"
+                layout="@layout/activity_class_selection_zonghe"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/selection_content"
+                layout="@layout/activity_class_selection_class_selection"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/lesson_record_content"
+                layout="@layout/activity_class_selection_lesson_record"
+                android:visibility="gone" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <include layout="@layout/drawer_layout_selection" />
+</android.support.v4.widget.DrawerLayout>

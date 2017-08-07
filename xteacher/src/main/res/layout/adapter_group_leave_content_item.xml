@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/adapter_group_leave_content_item_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:background="@color/activity_my_schedule_query_pull_refresh_view"
+        android:drawableLeft="@mipmap/leave_calendar"
+        android:drawablePadding="@dimen/dp_20"
+        android:drawableRight="@mipmap/person_top"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_15"
+        android:paddingRight="@dimen/dp_15"
+        android:text="2015年11月28日     星期四"
+        android:textSize="@dimen/sp14" />
+
+    <LinearLayout
+        android:id="@+id/adapter_group_leave_content_item_text_ll"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:background="@null"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/fly_text_common_course_arrangement"
+            android:layout_width="@dimen/dp_0"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/section"
+            android:textColor="@color/text_color32" />
+
+        <TextView
+
+            style="@style/fly_text_common_course_arrangement"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/work_manager_two"
+            android:textColor="@color/text_color32" />
+
+        <TextView
+
+            style="@style/fly_text_common_course_arrangement"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.3"
+            android:gravity="center"
+            android:text="班级" />
+
+        <TextView
+            style="@style/fly_text_common_course_arrangement"
+            android:layout_width="@dimen/dp_0"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.3"
+            android:drawableLeft="@mipmap/substitute_teacher"
+            android:drawablePadding="@dimen/space_14"
+            android:text="@string/to_be_a_substitute_teacher"
+            android:textColor="@color/text_color32" />
+    </LinearLayout>
+
+</LinearLayout>

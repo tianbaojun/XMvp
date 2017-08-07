@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_personal_calendar_month_day_back"
+    tools:context="com.zjhz.teacher.ui.fragment.MineFragment"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar"/>
+    <RelativeLayout
+        android:id="@+id/mycenter_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:background="@drawable/item_selector_backgroud"
+        android:layout_marginBottom="@dimen/dp_20">
+        <TextView
+            style="@style/me_text"
+            android:drawableLeft="@mipmap/mine_one"
+            android:text="@string/personal_data_center" />
+        <ImageView
+            style="@style/me_iv" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mine_pay"
+        style="@style/me_rl"
+        android:visibility="gone">
+        <TextView
+            style="@style/me_text"
+            android:drawableLeft="@mipmap/mine_pay"
+            android:text="@string/mine_pay" />
+        <ImageView
+            style="@style/me_iv" />
+    </RelativeLayout>
+    <View
+        style="@style/me_view" />
+
+    <RelativeLayout
+        android:id="@+id/opinion_rl"
+        style="@style/me_rl">
+        <TextView
+            style="@style/me_text"
+            android:drawableLeft="@mipmap/mine_two"
+            android:text="@string/feedback" />
+        <ImageView
+            style="@style/me_iv" />
+    </RelativeLayout>
+
+    <View
+        style="@style/me_view" />
+    <RelativeLayout
+        android:id="@+id/custom_service_rl"
+        style="@style/me_rl"
+        android:visibility="gone">
+        <TextView
+            style="@style/me_text"
+            android:text="@string/online_service" />
+        <ImageView
+            style="@style/me_iv" />
+    </RelativeLayout>
+    <View
+        style="@style/me_view" />
+
+    <RelativeLayout
+        android:id="@+id/about_rl"
+        style="@style/me_rl">
+        <TextView
+            android:id="@+id/gywm"
+            style="@style/me_text"
+            android:drawableLeft="@mipmap/mine_three"
+            android:text="@string/about_us" />
+        <TextView
+            android:id="@+id/newest_version_flag"
+            style="@style/me_text"
+            android:layout_toRightOf="@id/gywm"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:background="@drawable/version_update_flag"
+            android:text="New"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/white"
+            android:visibility="gone"/>
+        <ImageView
+            style="@style/me_iv" />
+    </RelativeLayout>
+    <View
+        style="@style/me_view" />
+
+    <RelativeLayout
+        android:id="@+id/updata_pwd"
+        style="@style/me_rl">
+        <TextView
+            style="@style/me_text"
+            android:drawableLeft="@mipmap/mine_pass"
+            android:text="@string/modify_password" />
+        <ImageView
+            style="@style/me_iv" />
+    </RelativeLayout>
+    <View
+        style="@style/me_view" />
+
+    <RelativeLayout
+        android:id="@+id/exit_login_rl"
+        style="@style/me_rl">
+        <TextView
+            style="@style/me_text"
+            android:drawableLeft="@mipmap/mine_exit"
+            android:text="@string/exit_login" />
+        <ImageView
+            style="@style/me_iv" />
+    </RelativeLayout>
+    <View
+        style="@style/me_view" />
+
+
+</LinearLayout>

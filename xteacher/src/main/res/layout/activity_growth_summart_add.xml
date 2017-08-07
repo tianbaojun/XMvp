@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zjhz.teacher.ui.activity.GrowthSummaryAddActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/title_bar" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dp_10">
+            <EditText
+                android:id="@+id/appraise_et"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_100"
+                android:gravity="top"
+                android:textColor="@color/gray3"
+                android:textSize="@dimen/sp_14"
+                android:hint="请输入学期汇总描述"
+                android:background="@null"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0.5"
+                android:id="@+id/line"
+                android:background="@color/gray_d"
+                android:layout_below="@id/appraise_et"/>
+
+            <com.zjhz.teacher.ui.view.ScrollViewWithGridView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/listview"
+                android:background="@color/white"
+                android:numColumns="3"
+                android:layout_below="@id/line"
+                android:layout_marginTop="@dimen/dp_10"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

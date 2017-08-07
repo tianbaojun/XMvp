@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_personal_calendar_relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zjhz.teacher.ui.activity.PersonalCalendarActivity">
+
+    <LinearLayout
+        android:id="@+id/activity_personal_calendar_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/title_bar" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/text_colore5">
+
+            <TextView
+                android:id="@+id/activity_personal_calendar_year_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dp_10"
+                android:text=""
+                android:textSize="@dimen/sp15" />
+        </RelativeLayout>
+
+        <com.zjhz.teacher.ui.view.calendar.MyWeekView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:background="@color/text_colore5" />
+
+        <com.zjhz.teacher.ui.view.calendar.MyMonthView
+            android:id="@+id/activity_personal_calendar_monthDateView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_240" />
+
+        <LinearLayout
+            android:id="@+id/activity_personal_calendar_ll_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_53"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/activity_personal_calendar_one"
+                style="@style/person_manager_itme" />
+
+            <TextView
+                android:id="@+id/activity_personal_calendar_two"
+                style="@style/person_manager_itme" />
+
+            <TextView
+                android:id="@+id/activity_personal_calendar_three"
+                style="@style/person_manager_itme" />
+
+            <TextView
+                android:id="@+id/activity_personal_calendar_four"
+                style="@style/person_manager_itme" />
+
+            <TextView
+                android:id="@+id/activity_personal_calendar_five"
+                style="@style/person_manager_itme" />
+
+            <TextView
+                android:id="@+id/activity_personal_calendar_six"
+                style="@style/person_manager_itme" />
+
+            <TextView
+                android:id="@+id/activity_personal_calendar_seven"
+                style="@style/person_manager_itme" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_personal_calendar_month_day"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:background="@color/activity_personal_calendar_month_day_back"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_15"
+            android:text="1月6日" />
+    </LinearLayout>
+
+    <com.zjhz.teacher.ui.view.PullToRefreshView
+        android:id="@+id/activity_personal_calendar_pull_refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/activity_personal_calendar_rl"
+        android:layout_below="@+id/activity_personal_calendar_ll">
+
+        <!--android:divider="#00000000"
+        android:dividerHeight="0dip"-->
+        <ListView
+            android:id="@+id/activity_personal_calendar_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:listSelector="@android:color/transparent" />
+    </com.zjhz.teacher.ui.view.PullToRefreshView>
+
+    <TextView
+        android:id="@+id/activity_personal_calendar_list_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/activity_personal_calendar_rl"
+        android:layout_below="@+id/activity_personal_calendar_ll"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/person_list_background"
+        android:gravity="center_vertical|center_horizontal"
+        android:visibility="gone" />
+
+    <!--输入评论-->
+    <RelativeLayout
+        android:id="@+id/activity_personal_calendar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:layout_alignParentBottom="true"
+        android:background="@color/activity_personal_calendar_rl_back"
+        android:visibility="visible">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.2"
+            android:layout_alignParentTop="true"
+            android:background="@color/activity_personal_calendar_rl_view" />
+
+        <TextView
+            android:id="@+id/activity_personal_calendar_send"
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_32"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_6"
+            android:layout_marginTop="@dimen/space_13"
+            android:background="@mipmap/person_one" />
+
+        <TextView
+            android:id="@+id/activity_personal_calendar_et_comment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:layout_marginLeft="@dimen/dp_6"
+            android:layout_marginRight="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_toLeftOf="@id/activity_personal_calendar_send"
+            android:background="@drawable/yuanjiao"
+            android:gravity="center"
+            android:hint="@string/please_enter_calendar_content"
+            android:textSize="@dimen/sp15" />
+    </RelativeLayout>
+
+    <!--输入评论 一 -->
+    <RelativeLayout
+        android:id="@+id/activity_personal_calendar_rl_one"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_150"
+        android:layout_alignParentBottom="true"
+        android:background="@color/activity_personal_calendar_rl_back"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.2"
+            android:layout_alignParentTop="true"
+            android:background="@color/activity_personal_calendar_rl_view" />
+
+        <TextView
+            android:id="@+id/activity_personal_calendar_send_cancle"
+            android:layout_width="@dimen/dp_42"
+            android:layout_height="@dimen/dp_32"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="@dimen/dp_6"
+            android:layout_marginLeft="@dimen/dp_6"
+            android:layout_marginTop="@dimen/dp_5"
+            android:gravity="center"
+            android:text="@string/pickerview_cancel"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/activity_personal_calendar_send_one"
+            android:layout_width="@dimen/dp_42"
+            android:layout_height="@dimen/dp_32"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/dp_6"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_6"
+            android:gravity="center"
+            android:text="@string/send_out"
+            android:textSize="@dimen/sp_16" />
+
+        <EditText
+            android:id="@+id/activity_personal_calendar_edit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_95"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/dp_15"
+            android:background="@drawable/shape_white_round_bg"
+            android:gravity="top"
+            android:hint=""
+            android:maxLength="50"
+            android:padding="@dimen/dp_5"
+            android:textColor="@color/text_color28"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/activity_personal_calendar_edit_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_above="@id/activity_personal_calendar_rl_one"
+        android:background="@color/activity_newsdetail_view" />
+
+</RelativeLayout>
