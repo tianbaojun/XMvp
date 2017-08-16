@@ -1,12 +1,14 @@
 package com.zjhz.teacher.NetworkRequests.response;
 
+import com.zjhz.teacher.bean.BaseModel;
+
 import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by Administrator on 2016/8/9.
  */
-public class SchoolListBean implements Serializable{
+public class SchoolListBean extends BaseModel implements Serializable {
     private String schoolId = "";
     private String schoolName = "";
     private boolean isSelect = false;

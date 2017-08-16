@@ -88,7 +88,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         unbinder = ButterKnife.bind(this);
         View back = findViewById(R.id.title_back_img);
         if (back != null) {
-            back.setOnClickListener(this);
+            view.setOnClickListener(this);
         }
         titleTv = (TextView) findViewById(R.id.title_tv);
     }

@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.neenbedankt.android-apt'
 
 def gitSha() {
     try {
@@ -311,7 +310,8 @@ dependencies {
     compile "com.tencent.tinker:tinker-android-lib:${TINKER_VERSION}"
     provided "com.tencent.tinker:tinker-android-anno:${TINKER_VERSION}"
     compile project(path: ':tinker')
-    apt "com.jakewharton:butterknife-compiler:8.4.0"
+    compile 'com.jakewharton:butterknife:8.8.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.0'
     //    androidTestCompile 'org.testng:testng:6.9.6'
 
     //    androidTestCompile 'junit:junit:4.12'
