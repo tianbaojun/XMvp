@@ -111,7 +111,7 @@ public class AppStartActivity extends BaseActivity{
                 }else {
                     if (SharePreCache.isEmpty(SharedPreferencesUtils.getSharePrefString(ConstantKey.TokenKey))){
                         JPushInterface.setAlias(AppStartActivity.this,"",mAliasCallback);
-                        startActivityThenKill(LoginActivity.class);
+                        startActivityThenKill(xmvp.ui.activity.LoginActivity.class);
                     }else {
                         startActivityThenKill(MainActivity.class);
                     }

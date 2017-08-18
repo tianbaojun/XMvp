@@ -118,7 +118,7 @@
             android:windowSoftInputMode="adjustResize|stateVisible" />
         <!-- 登陆 -->
         <activity
-            android:name=".ui.activity.LoginActivity"
+            android:name="xmvp.ui.activity.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide_fly"
             android:windowSoftInputMode="adjustResize|stateVisible" />

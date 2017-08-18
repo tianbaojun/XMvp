@@ -54,6 +54,7 @@ import butterknife.OnClick;
 import cn.droidlover.xdroidmvp.net.ApiSubcriber;
 import cn.droidlover.xdroidmvp.net.NetError;
 import cn.droidlover.xdroidmvp.net.XApi;
+import cn.droidlover.xdroidmvp.router.Router;
 import cn.jpush.android.api.JPushInterface;
 import cn.jpush.android.api.TagAliasCallback;
 import pro.kit.ViewTools;
@@ -117,14 +118,13 @@ public class LoginActivity extends BaseActivity {
 //    private String content = "";
 //    private boolean isShow = true;
     @Override
-    protected boolean isBindEventBusHere() {
+    public boolean useEventBus() {
         return true;
     }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
         ConstantKey.isLogin = true;
         initView();
     }
@@ -133,7 +133,6 @@ public class LoginActivity extends BaseActivity {
         boolean isRemeber = SharedPreferencesUtils.getSharePrefBoolean(ConstantKey.isRemberPwdKey, false);
         mChkRememberPass.setChecked(isRemeber);
         isRememberMe = isRemeber;
-
         boolean isAuto = SharedPreferencesUtils.getSharePrefBoolean(ConstantKey.isAutoLogin, false);
         mChkAutoLogin.setChecked(isAuto);
         isAutoLogin = isAuto;
@@ -141,6 +140,7 @@ public class LoginActivity extends BaseActivity {
     }
 
     public void initData() {
+//        setSystemBarTintDrawable(getResources().getColor(R.color.title_background_red));
         //给两个输入框默认添加帐号和密码
         String userName = SharedPreferencesUtils.getSharePrefString(ConstantKey.AccountKey, "");
         if (!SharePreCache.isEmpty(userName)) {
@@ -240,7 +240,7 @@ public class LoginActivity extends BaseActivity {
         Api.getLoginService().login(CommonUrl.login, map)
                 .compose(XApi.<LoginRespon>getApiTransformer())
                 .compose(XApi.<LoginRespon>getScheduler())
-                .compose(.<GankResults>bindToLifecycle())
+//                .compose(.<GankResults>bindToLifecycle())
                 .subscribe(new ApiSubcriber<LoginRespon>() {
                     @Override
                     protected void onFail(NetError error) {
@@ -379,7 +379,7 @@ public class LoginActivity extends BaseActivity {
         dialog.dismiss();
         SharePreCache.login(userLogin);
         JPushInterface.setAlias(this, userLogin.getUserId(), mAliasCallback);
-        startActivityThenKill(MainActivity.class);
+        Router.newIntent(this).to(MainActivity.class).launch();
         ConstantKey.isLogin = false;
     }
 
@@ -457,12 +457,19 @@ public class LoginActivity extends BaseActivity {
 
 
     @Override
+    public void initData(Bundle savedInstanceState) {
+
+    }
+
+    @Override
     public int getLayoutId() {
-        return 0;
+        return R.layout.activity_login;
     }
 
     @Override
     public Object newP() {
         return null;
     }
+
+
 }
